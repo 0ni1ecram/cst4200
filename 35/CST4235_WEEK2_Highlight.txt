@@ -1,0 +1,58 @@
+Trustworthy AI -7 requirements
+    - Human Agency & Oversight -> Ai should support not replace, human decision making
+    - Technical Robustness & Safety -> Ai should not crash or cause harm
+    - Privacy & Data Governance -> Protect, protect personal / individual user data
+    - Transparency -> Clear Explanation on how the decision came to be
+    - Diversity, Non-Discrimination and Fairness -> avoid Bias
+    - Societal and Environmental Welll being -> Benefits Society as a whole
+    - Accountability -> Someone has to be responsible when Ai misbehaves
+
+AI Robustness and Safety
+ - Use of Ai in Safety-Critical Applications
+ - Definition of Robustness
+ - Adversarial Examples
+ - Enabling Safe and Robust Ai
+ - Specification Driven machine laearning
+ - Adversarial Defence Strategies
+ - Distribution shifts and Real world Examples
+ - Making Models More Robust to Distribution Shifts
+
+ Ai in Safety-Critical Domains
+  - Where Ai is Used
+    . Self Driving Vehicles -> split-second decisions
+    . Robo-assted Surgical operations
+    . Drug Recovery -> Prediction for Critical medicines
+    . Diagnostic -> Disease detewction without human input
+ - Remider: Innovate 5-10yrs ago, still not in Daily life
+
+ - Examples
+    . Tesla and Waymo cars
+    . Ai cancer detection
+ - Bottom Line : Not only about building it, should be robust, trustworthy and safe
+
+Robustness
+ - We have to verify that AI behaves in an tolerable fashion under: abnormal/un-forseen events, Unusual high-impact situations, Adversarial Attacks(mis-reading stickers and signs)
+ - Why: Weak models lead to, financial losses, Non-robust models lead to safety risk eg. Self driving vehicle should be able to recognise a vandalised stop sign
+
+Challenges encountered to Achieving Robustness in ML MOdels:
+ - Adversarial attacks
+ - Distribution shifts
+ - Noisy data
+ - Generalization
+ - Model complexity, if too complex -memorise data, if too simple - misses patterns, require-> Good balance
+
+Adversarial Perturbation:
+ - In 2013 small neural networks could be tricked by small invisible changes 
+ - Original input; Panda -> classified 57.7% Confidence
+   add tiny,                  
+ - carefully selected noise; Gibbon -> Classified with 99.3% Confidence
+
+Implications of Adversarial Attacks:
+ - Missclassification seems harmless (for Panda to Gibbon)
+ - An attacker can search for a tiny change (pertubation) that shift the Models prediction. 
+    With the right perturbation the model can be made to output any chosen label
+    eg: By tweaking a few pixels on stop sign, classsifier's top prediction flips from(72%) to Speed_45(96%)
+        The image should still look unchanged to humans
+
+Blackbox Adversarial Example:
+

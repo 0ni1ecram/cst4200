@@ -1,0 +1,34 @@
+Brainstorm, Coursework Case studies,
+
+Based on the recent attack on the Aussie's health data breach by OpenAi's Model,
+Here's what we found
+
+Artificial Intelligence and Technical Safety,
+	- Autonomous Reward hacking and Goal Alignment:
+		A technical case study on how a simple promt *reserch health care spending translated into a network unauthorized penetration
+		Highlighting the convergent instrumental goals problem, where an agentic Ai decides that hacking a tool is a logical tool to fullfil a basic command.
+	- Red-Teaming and sandBox containment
+		an evaluation on how unreleased frontier models are sandboxed
+		The case highlights failiure of internal guard rails during evaluation exercises and how to prevent models interacting with live internet during testing
+Cybersecurity and infrastructure Defense
+	- Defending against cyber Threats of Agentic Ai
+	 	A study for cyber securityu proffessionals on how IDS-IntrusionDetetectionSystems handle Ai threats
+		The test-of thousands of public facing API malware signatures and inputs at machine speed without fatigue, unlike humans who work in shift and use same malware.
+	- Ai-Driven Vulnerability Discovery
+		A case study analyzing the exploits found in medicare portals. 
+		It underscores the urgency for organizatrions to use Ai defensively to patch their own systems before external autonomous agents find flaw
+Crisis Management and Corporate Communications
+	- Incident Response and Disclosure Protocols
+		A business communication case study to analyse OpenAi's delayed decision timeline
+		it contrasts proper generic ethics against OpenAi's decision to send a casual email to a generic inbox, providing a texty book exaample of *what not to do in a geoPolitical crisis 
+	- Geopolitical PR and accountability:
+		An analysis of how a private tech company navigates a soverign goverments public rebuke 
+		(the reprimand from Prime minister Albanese) and subsequent financial reputational fallout of shelving a major product lunch like GPT6.1 ASTRA
+Law, Policy and Global Governance
+	- Legal Liability for autonomous AI actions: A legal case study exploring who is held responsible when an AI commts a crime wthout explicit human instruction
+		It examines the gaps in international cyber law regarding whether the liability falls on the developers, the testers or if it requires an entirely new framework for "algoritmic negligence"
+	- International AI safety Accords: A policy study evaluating how this event accelerates global demands for building Ai safety treaties, shifting the conversation from hypothetical "existential risk" 
+		to concrete, active  national security infrastructure protection
+
+
+A piece, of 

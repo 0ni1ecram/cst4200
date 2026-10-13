@@ -1,0 +1,216 @@
+Ethics Privacy, Security in Data Science and Artificial Intelligence
+
+Scenario: Hacking into Cloud Accounts
+1. Who is responsible for Customer Cloud Accounts
+
+2. Are files Stored in Cloud Accounts sorely the property of the individuals (similar to the devices they own)?
+
+3. OR do these files in the cloud alter their status as the sole-property of an individual?
+
+4. What does this scenario suggest about cybersecurity and protection of personal data stored on the cloud or devices?
+
+Learning Outcomes of the Module: 
+    Demonstration of comprehensive understanding, Analyis of ethical, legal and societal implications, Evaluation of frameworks, standards and Practices
+
+The Rise of Big Data: Opportunities and Risks:
+    - Source form: IoT devices, mobile apps and smart services
+    - Powering, innovation, healthcare, Finance, transportt and Smart Cities
+    - Rising Serious Concerns: Ethics(Bias, Fairness, Transparency), Privacy(Risk on personal, sensitive data), Security(Breaches, Misuse and Surveillance)
+
+Major examples include Dubai's Smart city strategy, collecting data from Transport(RTA), utitlities (DEWA) and public services (DubaiNow)
+    - Benefits: Efficiency, Improved service provision
+    - Risks: Location tracking, Profiling, potential of Data Misuse
+
+RESPONSIBILITY: The duty or obligation to fulfill roles, tasks or duties in a reliable accountable way
+    - The core pf Ethica; and moral behaviour
+    - Taking ownership of actions and acknowledging the impact o yourself others and society
+    eg: - Borrowing a book, returning it is RESPONSIBILITY
+        - Locking the door or Not texting while driving, simple self disciplines protecting oneself and others
+
+    Imagine the possobility: Data scientist leaks health data,
+        - Patient suffer -privacy violstion, loss of trust ,legal penalties on the organisation; Damage reputation, accountability on the scientists side
+FROM Responsibility to Responsible Ai 
+    - Responsible Ai = designing, developing and using Ai in ways that are ethical and fair and accountable
+    - It is more than a check list, its about building trust and thinking about the impacts on the society
+    Eg: - An Ai recruitment tool trained on biased data -> Preference waivered to male candidates over female
+                    -> System passed technical tests but failed society
+        Responsibility features include: Reliability, Ethics, trust, Respect
+
+
+Responsible Ai from Isaac Asimov
+- Do Not Harm humans
+- Obey Human orders
+- Protect yourself
+- Zeroth Law: Protect humanity as a whole
+
+Law 1: A smart oven should not overheat and cause Fairness
+Law 2: Alexa or Sirishould I follow your command but refuse if you say "order poison"
+Law 3: A vaccum robot should not drive down the stairs and break
+Zeroth Law: Traffic Ai should reduce accidents and pollution for everyone, not just make one person's journey faster
+
+Why Responsible Ai Matters in Practice:
+- Technology is a double-bladed sword
+- Risky Use Case: AI in surveillance -> bias in facial recognition/innocsnt people wrongly flagged
+
+We are looking for: fairness, accountability, transparency and respect for human rights in how Ai is designed and used.
+
+Same technology, two very different outcomes. 
+What makes one responsible and the other risky?
+
+AI Fairness Failures(Example)
+Amazon recruitment AI: Designed to rank appplicants
+- Trained on past resumes -> mostly from men
+- Result: Learned to down-rank resumes that included the word "womens"
+- Outcome: Baised against female candidates -> eventually scrapped
+
+Amaon Rekonition
+ - Tested on Photos of US Congres members
+ - The System, wrongly matched 28 people with criminial records
+ - Errors were much higher for people with darker skin
+ - This shows how AI can unfairly target certain groups.
+
+ The COMPAS Risk Score-Biased or Fair?
+ The correctional Offender Management Profiling for Alternative Sanction (COMPAS) is used in courts to predict if somone is likely to reoffend (recidivism)
+ - Judges may use the score when deciding bail, sentecingor parole
+
+ The Problem:
+ - Investigations showed COMPAS often gave higher risk scores to Black defendants compared to White defendants with similar records.
+ - Example: Two people with similar offence -> COMPAS gave the Black defendant a "High Risk" score and the White defendant a "Low Risk" score
+
+ Question to ask: is the system reflecting reality, or is it amplifying historical bias in the data?
+
+Echo Chambers & Filter Bubbles in Ai: Algorithms keep showing people content similar to what the already like or beleive
+ - Think of Tik Tok or Youtube: if you watch a few videos on one topic (fitness, cooking or celebrity gossip),
+    the app quickly fills your feed with only that type of content.
+    Alternative perspective get filtered out.
+
+    Over time , this creates polarisation: people become more extreme and less open to other viewpoints.
+
+ - Why it matters: Impacts democracy ( people only hear one side)
+        - Fuels misinformation and division in society
+ - How to fix it (Responsible Ai):  
+    - Algorithms should be transparent ( Users should know how recomendations are made)
+    - System should expose users to diverse view points and reliable sources
+
+Principles and Guidelines for Responsible Ai
+    - UNESCO(2021): Global agreement signed by 193 countries, fopcused on human right inclusion and sustainability
+    - European Comission(2019) : Published Ethic guidelines for trustworthy Ai- Highlighting Transparency, fairness and accountability
+    - OECD(2019): 46 countries endorsed principles, Ai should be robust, safe and RESPECT rule of law
+    - IEEE(2019): Guiding engineer, researchers/humans to build Ai that puts humans first
+    - National Strategies: Uk, UAE, USA, China each country sets priorities around, safety, innovation, regulation
+ With these guidelines, we can shape how Ai is designe, deployed and regulated eg: chatGPT and Tiktok-recommendation systems
+
+TRUST WORHTY Ai The three Pillars
+    The High level expert group of the European Commission released the Ethics Guidelines for Trustworthy Ai(2019)
+        - Lawful, Ethical and Robust(Reliability, safe and Socially responsible)
+    One alone is not enough, all three must work together to build Ai people can Trust.
+
+Trust Worthy Ai - 7 requirements
+    - Human Agency and Oversight -> Doctors make final calls , not just the Ai system: Ai should support and NOT replace human-decision making 
+    - Technical Robustness and safety -> Self driving cars should work safely in all conditions: Ai should not crash or cause Harm
+    - Privacy and DAta Govenrnance -> One's health app should not sell their medical history: Protection for personal data
+    - Transparency -> Why is my loan rejected, why is it approved either: clear explanation on how the Ai results to conclusion
+    - Diversity, non-discrimination and fairness -> Hiring Ai, should not favor one gender or ethnicity:Avoiding Bias
+    - Societal and Environmental well being -> Ai from clean energy, not just profitable: benefits the society as a whole
+    - Accountability -> Who is accountable, when Ai makes mistakes...somone has to responsible for the Ai outcomes
+
+HUMAN AGENCY and Oversight
+    Human-in-the-loop: Ai could run a diagnosisbut final decision is pulled of by the human expert: The supervisor can intervene in every decision cycle
+    Human-on-the-loop: Human driver can intervene when Ai encounters an unexplainable situation: Human monitors and intervenes when necessary during operations
+    Human-in-command: In commercial aviation, auto pilot handles the flight, but pilot retains authority to override case of emergency: Human retain ultimate decision making over Ai systems actvities 
+
+Technical Robustness and Safety
+    - Ai systems, should be resilient, secure and reliable
+    - They should have a fall back plans when things go wrongly
+    - Accuracy, reproducibility and reliability are key to preventing Harm
+    : When algorithim misclassifies a scan, it should flag the misclasification rather than give a wrong diagnosis
+
+Privacy and Data governance: 
+    NYC Taxi dAtaset (2014): Case study
+        - 173 Million Records released to support open data researchers
+        - Inclusion: Drop off, Pick up points, times, fares and taxi driver iDs 
+        - Exclusions: Names, Phone Number
+        - Researchers / journalists were able to identify: specific drivers and conduct income estimates, track passengers(when and where they travelled)
+        - Findings: Location Time Data can act as : Quasi-Identifiers, hence making re-identification possible
+            - Limits of anonymisation are observed, what is there to say for?
+            - Why Time Location Data is risky?
+                : Due to having time stamps, one could only be at one place at a one specific time
+            - What could the City conduct differently to protect privacy while still enabling research?
+                : Round up time to mimic the duration spent for data accuracy, but no actual values are displayed
+                : Cryptographic hashing of the IDs for taxi drivers not to be identifiable
+                : Use of generalised locations rather than exact GPS coordinates
+                "The Limits of Anonymization
+                        This case demonstrates that traditional anonymization (like data stripping or masking) is insufficient for high-dimensional datasets. Removing direct identifiers like names and phone numbers does not equal true anonymity. When data is rich enough, it can be combined with external, publicly available information (such as celebrity paparazzi photos with visible timestamps, or public check-ins) to reverse-engineer identities. This proves that data can be easily re-identified without ever possessing explicit personal details.
+                        Why Time-Location Data is Risky
+                        Time-location data is inherently dangerous because human mobility patterns are highly unique and predictable.
+                        • Quasi-Identifiers: A single coordinate might mean nothing, but a sequence of timestamped locations (e.g., leaving a specific suburban home at 7:30 AM and arriving at a specific office at 8:15 AM) uniquely fingerprints an individual.
+                        • Low Entropy of Human Movement: Research shows that just four spatio-temporal points are enough to uniquely identify 95% of individuals in a mobile dataset.
+                        • Sensitive Inferences: Location tracking exposes highly sensitive, private habits, including visits to medical clinics, political rallies, religious venues, or romantic partners, creating immense potential for blackmail, stalking, or corporate surveillance.
+                        What the City Could Do Differently
+                        To balance public research utility with individual privacy, the city could implement the following data protection frameworks:
+                        Strategy	Technical Implementation	How It Protects Privacy
+                        Differential Privacy	Mathematical noise is injected into the dataset before release.	Ensures that an observer cannot definitively prove whether a specific individual's data was included in the dataset, masking exact habits.
+                        Data Aggregation & K-Anonymity	Grouping individual points into broader categories (e.g., rounding pickup times to the nearest 15–30 minutes and grouping locations into larger postal zones/neighborhoods instead of exact GPS coordinates).	Guarantees that an individual's trip looks identical to at least \(k-1\) other people's trips, preventing single-out tracking.
+                        Cryptographic Hashing with Salt	Instead of poorly masked or raw driver IDs, use strong, salted cryptographic hash functions changed frequently.	In the actual NYC case, driver IDs were hashed using MD5 without a salt, allowing researchers to easily crack them via brute-force. Proper salting prevents this.
+                        Tiered Access / Synthetic Data	Releasing entirely artificial "synthetic datasets" that mimic real traffic patterns for general public research, while restricting raw data to a secure virtual enclave for vetted researchers.	Keeps raw location data entirely out of the public domain while still providing statistical utility for urban planning."
+Privacy and Data Governance:
+    NETFLIX Prize(2006)
+        - Lauched to improve recomendation system
+        - Released dataset of 10M movie ratings from ~500,000 subscribers
+        - Exclusions: Name, addresses, other explicit identifiers to protect privacy
+        - some dudes: Narayanan, shmatikov found a loop hole to re-iodentify users
+                        - By using dataset from Netflix and cross referencing it with a public IMDb dataset
+        - Findings: Re-identification was possible
+            - wHY was it possible, despite anonymisation?
+            - How do external datasets llike IMDb pose a threat
+            - What safe uards could be used?               
+
+Diversity, Non-discrimination and Fairness.
+    - AI should be fair and unbiased across data, design and deployment
+    - Unfair bias can marginalise groups and reinforce discrimination
+    - AI systms must be accessible to all including people with disabilities
+    - Invoke diverse stakeholders throughout the Ai-lifecycle
+    CASE: Sansa Voice Translation
+        - Voice synthesizer can remove non-American accent in real-time but has critics claiming it is white-washing or playing intov racism
+        - Findigns: should workers have to change their accent to be treated fairly?
+                    - Is this a fair solution or an unfair burden on the workers? 
+                        : If company's profitability and image is on the line, then definately. Also it is somthing that can be humanly adjusted unlike skin.
+                          Here's the thing if a company requires one to learn Math, English, Korean literature, it is upto the stadff to keep up with the standard, if not..leaving is always an option
+                    - Is the tool racist or is it just a temporary fix until people's atitude improve?
+                        : People's attitude need to improve, since the whole sense of its existance is to make peoples lives better no matter the case, that is the initial instruction. 
+                            Now if that will require white wasahing then blame the user base
+
+SOCIETAL and Environmental Welbeing
+    - Ai should benefit society and future generations. It must be:
+                                                                - Sustainable
+                                                                - Fair
+                                                                - Environmentally responsible
+
+    - Positive impact - Deep Mind & Google DAta Centers (2016)
+        - Ai optimoized to cool systems in Google's Datacenters
+        : REsulting- 40% reduction in energy usage
+        : Demonstrating how Ai could lower the Carbon Footprint
+    - Negative Impact - Volkswagen Emission Scandle(2015)
+        - VW used the Ai/Software to cheat /emissions tests
+        - Cars estimated to emit 40x more pollutants
+        - Harming public health and the environment, betraying societal trust
+
+Accountability
+    - Microsoft Tay (2016)
+    : Tay was a chatbot on Twitter, learning from peoples conversations
+    : Tay, learnt the way of the trolls in twitter and turned out to start trolling (cant blame Tay, was taught by the wrong crowd)
+    - Issues
+        - Microsoft, initiated an unsafe release, the release with no-safeguards
+        - Bot data source was unfiltered Tweets from twitter in real time interactions, No Accountability to stop the misuse or Monitoring TAy
+        : finally , was shut down in 24-hrs 
+    Who was accountable for Tay's case? 
+        : The developers of course
+        - But in Practice, accountability was unclear:
+            The learning data, in this case them twitter users are to hold part of the blame fueling Tay's learn cycle
+            Mirosoft issued public apology, after damage was done 
+    Lesson:
+        Accountability: Before and After
+            Before: Clear ROles, Testing, Oversight and responsible design
+            After: owning failures transparently, explaining what went wrong and setting up safe guards to prevent recurrance
+             
+    
