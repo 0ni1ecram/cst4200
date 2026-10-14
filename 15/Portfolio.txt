@@ -1,0 +1,61 @@
+First Assesment: 27/10/2026
+
+
+2 - Files
+.pdf
+.ipynb
+
+Background,
+- Apply Datascience Ai Concept
+- Build an end to end Data science workflow
+
+Provided: Dataset
+
+Identify the Domain
+
+Chooose / Understanding the the Daomain Related Problem,
+
+identify the KPI, dependence indicator, use 3-4 attributes construct indicator
+
+Apply ML, data science concepts,
+apply Natural Lang processing if necessary
+
+
+Arrange a Report
+
+Name, ISIS number
+
+Introduction to the Business Scenario
+
+Define the KPI, identify and investigate what  the scenario is all about. One of the KPIs is defined
+
+FOrm an Equation exdplaining the KPI
+
+Importance of the KPI
+- why important
+- Explain will resolve scenario
+
+DAta Profiling
+- Understand various attributes
+- identify the variopus types 
+- Know nature and characteristics of dataseet
+
+
+Methodology and Data preprocessing
+
+Apply the Model selecting and 
+- 2-ML algos, to fit your features and how KPI is predicted with what is had
+- Model Training and evaluation
+	- Accuracy or precission
+
+CArefull: using correlation test, detect data leakeage
+
+Utilize tables or chart
+
+Compare the Evaluatrion metrics
+
+Interpretation of various findings
+- Key fdrivers of the business indicators (KPI)
+
+Suggest next course of action
+- Based on the Driver and Key results
