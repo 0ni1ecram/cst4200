@@ -7,8 +7,12 @@ First Assesment: 27/10/2026
 
 Background,
 - Apply Datascience Ai Concept
-- Build an end to end Data science workflow
+	- In the case  of huge processing data manual analysis of a data set is not an option
+There for we result to computation analysis of data which involves machine learning. 
+By letting the analysis of data get handled computationally, we get to handle the decisions to make , forecast preparation and identification of insights
 
+- Build an end to end Data science workflow
+Data preperation (cleaning, GEtting to know one's own data) -> Statistics -> Machine Learnin -> Ai Algorithm -> Insight -> Decision
 Provided: Dataset
 
 Identify the Domain
