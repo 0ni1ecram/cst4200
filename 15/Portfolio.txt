@@ -24,38 +24,86 @@ apply Natural Lang processing if necessary
 Arrange a Report
 
 Name, ISIS number
+--------------------
+Marcelino Mariwa
+M00778344
 
+_____________________________________
 Introduction to the Business Scenario
+--------------------------------------
+The site has excellent stats, but could always do better.
+With more traffic , we could do better with the vendors sourcing better products,
+Manufacturers kindersing towards what sells best, and more appealing towards the customers/consumers
 
+___________________________________________________________________________________________________
 Define the KPI, identify and investigate what  the scenario is all about. One of the KPIs is defined
+----------------------------------------------------------------------------------------------------
+Using the provided dataset, products.csv we can find data on recent_purchases, price_value, rating_stars in which they could help predict
+These points could help predict the frequency of new confirmed recent_purchases this will deal with confirmed purchase conversion index
+Using availability, delivery_data, fastest_delivery_date, availability and price_value we could finally trap returning buyers
+and know how much are they willing to pay more for the products since this focus will deal with the shipping velocity exclusive index 
+_______________________________________
+Form an Equation exdplaining the KPI
+-------------------------------------
+For the KPI of choice: index of cunsumer purchase, we require 3 variables all of which are weighted differently
+recent_purchase: This is the variable that will determine if a consumer is a trend follower since this variable identifies the current trend
+rating_stars: This is encoded towards the number of ratigs from 5 - 1 where by it will detemine if consumer is biased towards early adopters and money isn't a problem
+price_value: This is encoded towards price tiers from expensive to cheapest, this will determine if the consumer cares about how much is spent
 
-FOrm an Equation exdplaining the KPI
+other variables to be considered is the time of receiving the package this could be very essential to returning clients
+Since the trust is already established between vendor, platform and client. Fine tuning the service
 
+________________________________
 Importance of the KPI
 - why important
 - Explain will resolve scenario
+-------------------------------------
+This KPI is sensitive towards the prediction / probability of new consumers that passby to browse, knowing exactly the key stats that will attract the consumer
+Hence turning the consumer to a confired_purchase.
 
+Since our whole scenario is targeted towards increase of confirmed purchase in order to fuel the R&D of the manufacturers, and get enough feedback to promote or demote vendors
+All in the name of protecting the brand
+
+___________________________________________________________________________________________________
 DAta Profiling
 - Understand various attributes
 - identify the variopus types 
 - Know nature and characteristics of dataseet
+---------------------------------------------
+With the provided dataset, in this case 2 are provided, one for products and the other for reviews.
 
+Our main focus the (y) is in the reviews, since our trget is turning random scrapers to confirmed_buyers, the reviewers help in letting us know.
+Since in the Products dataset we have a rough idea on how many products are sold with the min. count being 50
 
+___________________________________________________________________________________________________
 Methodology and Data preprocessing
 
+
+___________________________________________________________________________________________________
 Apply the Model selecting and 
 - 2-ML algos, to fit your features and how KPI is predicted with what is had
 - Model Training and evaluation
 	- Accuracy or precission
+---------------------------------------------
 
+___________________________________________________________________________________________________
 CArefull: using correlation test, detect data leakeage
+---------------------------------------------
 
+___________________________________________________________________________________________________
 Utilize tables or chart
+---------------------------------------------
 
+___________________________________________________________________________________________________
 Compare the Evaluatrion metrics
+---------------------------------------------
 
+___________________________________________________________________________________________________
 Interpretation of various findings
 - Key fdrivers of the business indicators (KPI)
+---------------------------------------------
 
+___________________________________________________________________________________________________
 Suggest next course of action
 - Based on the Driver and Key results
+---------------------------------------------
