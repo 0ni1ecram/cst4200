@@ -32,7 +32,33 @@ Law, Policy and Global Governance
 
 
 A piece, of sheet
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+When presenting these arguments to a jury in a legal proceeding, developers must translate technical jargon into clear, relatable concepts. Jurors respond best to arguments about proportionality, duty, and the separation of responsibilities.
+The defense should frame the developers not as creators of a biased system, but as engineers who built an accurate tool that was ultimately mismanaged by the university's infrastructure and administration.
+Here is how developers can structure their defense specifically for a jury:
 
+1. "We Built a Smoke Detector, Not the Fire"
+
+• The Core Argument: A smoke detector is designed to sound an alarm when it detects smoke. If a specific building has faulty wiring and catches fire more often, you do not blame the smoke detector for ringing.
+• Jury Translation: The algorithm did exactly what the university asked it to do: it accurately identified which students were statistically slipping through the cracks. It flagged low-income and minority students more often because those students are historically underserved by the education system. Silencing the tool because the results are uncomfortable would be like taking the batteries out of a smoke detector because you don't like the noise.
+
+2. "You Cannot Blame the GPS for the Driver's Crash"
+
+• The Core Argument: The distinction between software output (data) and human action (policy).
+• Jury Translation: Developers write code to provide information; they do not run the university. The AI simply handed a list of "at-risk" names to human administrators. If the university used that list to alienate or neglect students instead of giving them extra tutoring, counselors, and financial aid, that is a failure of human leadership, not software engineering. The tool was meant to guide help, not to punish.
+
+3. "Medical Scans are Complex; So is Predictive AI"
+
+• The Core Argument: Defending the "black-box" nature of the algorithm.
+• Jury Translation: An MRI machine uses highly complex physics to find a tumor, and a normal person cannot look at the raw data and understand how it works—we rely on the doctor to interpret the final image. To catch subtle signs of student distress (like a change in tone on discussion boards), the software had to be highly advanced. Forcing the code to be simple enough for a layman to read would make it too weak to actually find the students who needed help.
+
+4. "We Designed the Engine, We Didn't Guard the Garage"
+
+• The Core Argument: Deflecting liability for the data leak.
+• Jury Translation: In the software world, building an AI model and securing a network are two completely different jobs. The developers are the mechanics who built a highly efficient engine. The university's IT and security teams were the security guards responsible for locking the garage door. The data leak happened because someone left the door unlocked, not because there was a flaw in the engine's design.
+Would you like to draft a specific cross-examination strategy for the developers, or should we prepare the prosecution's counter-arguments to see how a jury might push back?
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 https://www.ceeol.com/search/article-detail?id=1354793
 
 https://rria.ici.ro/documents/1210/art._Sambucci_Paraschiv.pdf
@@ -52,3 +78,115 @@ https://www1.racgp.org.au/ajgp/2026/june/artificial-intelligence-assisted-mental
 https://openai.com/index/how-we-will-do-better-for-australia/
 
 https://research.google/blog/react-synergizing-reasoning-and-acting-in-language-models/
+
+
+Abstract: As artificial intelligence (AI) is becoming increasingly integrated into critical infrastructures, it
+brings about both transformative benefits and unprecedented risks. AI has the potential to revolutionize the
+efficiency, reliability, and responsiveness of essential services, but it can also offer these benefits along with
+the vulnerability to a growing array of sophisticated adversarial attacks. This paper explores the evolving
+landscape of adversarial threats to AI systems, highlighting the potential of nation-state actors to exploit these
+vulnerabilities for geopolitical gains. A range of adversarial techniques is examined, including dataset
+poisoning, model stealing, and privacy inference attacks, and their potential impact on sectors such as energy,
+transportation, healthcare, and water management is assessed. The consequences of successful attacks are
+substantial, encompassing economic disruption, public safety risks, national security implications, and the
+erosion of public trust. Given the escalating sophistication of these threats, this paper proposes a
+comprehensive security framework that includes robust incident response protocols, specialized training, the
+development of a collaborative ecosystem, and the continuous evaluation of AI systems. The findings of this
+study 11 underscore the critical need for a proactive approach to AI security in order to safeguard the future of
+critical infrastructures in an increasingly AI-driven world
+
+Abstract
+: Generative AI chatbots are increasingly embedded in everyday life,
+yet most large-scale studies describe global patterns. This paper
+presents an Australia-focused analysis of WildChat, a public dataset
+of real-world ChatGPT interaction logs. Using descriptive analysis
+and a multi-layer classification scheme, we analysed 37,845 conversations identified as Australian, examining language diversity,
+work relevance, interaction intent, topic distribution, turn-taking,
+temporal change, work activities, and Australia-related domains.
+Our findings show that the Australian subset is strongly actionoriented and comparatively work-oriented, with most interactions
+classified as doing and a majority of conversations classified as
+work-related. The dataset also shows multilingual use and a growing presence of self-expression over time. Australia-related conversations frequently invoke local institutions, laws, regulators,
+education systems, companies, cultural references, and public services. Finally, we outline implications for future research, including
+local AI evaluation, multilingual participation, context-aware design, and safeguards for everyday high-stakes domains.
+
+Abstract
+Introduction. Artificial intelligence applications in healthcare continue to grow in
+number and in complexity. These technologies have the potential to improve healthcare
+services, but they also have the potential to cause harm to patients and healthcare
+systems. Australia is currently decoding on strategies to govern AI technologies.
+Although policy documentation often describes the importance of ensuring public ‘trust’
+in AI, there are few avenues for publics to provide input into how AI is regulated and used.
+My overarching aim with this thesis is to describe how the implementation and regulation
+of AI in Australian healthcare can be informed by public views. This aim underpins two
+research questions: (1) to what extent, and under what conditions, do publics support
+the use of AI in healthcare in Australia? and (2) how should research be designed to
+support publics to contribute to decision-making about AI in healthcare?
+Methodology & Methods. In this thesis, I report on three separate empirical studies in
+relation to public views on AI in healthcare. Chapter 5 reports results from a subgroup
+analysis of a survey on public attitudes toward AI. Chapter 6 discusses results from
+dialogue groups with 47 Australians on their views on using AI in healthcare. Chapter 7
+reports on the process of designing an evaluation tool for deliberative democratic
+methods and piloting the tool on a Citizens’ Jury that engaged 28 Australians in a process
+to determine how healthcare AI should be used in Australia.
+Results. The survey study (Chapter 5) found that a small majority of participants
+supported the development of AI. However, dialogue groups (Chapter 6) revealed that
+even strong supporters placed conditions on its use. Participants preferred a cautious
+approach to implementing AI, where implementation of AI was prioritised in areas where
+it solved longstanding problems in the Australian healthcare system, such as access to
+care in remote areas. Participants also preferred slowing or halting the adoption of AI in
+areas where it could cause significant harm, such as instances where important
+decisions about people’s health are automated, or instances where an AI interaction
+replaces an opportunity for a person to interact with a healthcare worker.
+In Chapter 7 I led the design and piloting of an evaluation tool for Citizens’ Juries. The tool
+elucidated the connection between deliberative democracy theory, method, and
+practice. The resulting C-JuRI tool allowed us to identify and report on strengths of the AI
+in Healthcare jury, where the process was close to an ideal deliberative democratic
+process. We also identified opportunities to make changes to future processes to better
+work toward deliberative democratic ideals.
+Discussion & Recommendations. The findings of this thesis address tDiscussion & Recommendations. The findings of this thesis address two questions:
+(1) To what extent, and under what conditions, do publics support the use of AI in
+healthcare in Australia?
+Australians’ support for healthcare AI is conditional and context dependent. Publics
+prefer AI systems that improve equitable outcomes and access to care, particularly
+where AI offers solutions to longstanding challenges in the Australian healthcare system.
+However, publics are resistant to applications that impact patient-clinician relationships
+or automate important decision-making. These findings suggest that the national
+guardrails for high-risk AI, that were proposed by the Australian government and
+subsequently revoked, would have been necessary but insufficient to address public
+concerns about the use of AI in healthcare. In developing their new approach to AI
+regulation, the Australian government should consider developing policies to assess
+whether the introduction of AI-based tools into existing healthcare systems will be
+beneficial for patients, publics, and healthcare professionals.
+(2) How should research be designed to support publics to contribute to decision-making
+about AI in healthcare?
+This thesis demonstrates that meaningful public contribution to decision-making about
+AI requires research designs that actively support learning, reflection, and informed
+deliberation. Deliberative democracy offers a robust framework and justification for such
+designs. By providing participants with opportunities to learn about an issue, and by
+supporting participants to deliberate about the issue with their peers, researchers can
+produce recommendations that are more inclusive of diverse views in the community
+and create processes that demonstrate more respect for publics as people and as
+knowers. Healthcare AI research with publics could benefit greatly from the more
+widespread adoption of deliberative democratic principles.
+
+Australia faces a simple choice: we can be an AI leader, or an AI follower. This playbook presents a practical
+path forward built on three foundations – economic growth, security and setting up Australia as a
+world-leader in AI – to secure Australia’s prosperity in the AI era ahead.
+AI has been decades in the making, but the 2022 release of ChatGPT 3.5 reignited public imagination and
+pushed the technology into everyday life within months. While this technology has the potential to add $600
+billion annually to the Australian economy by 2030, only 30% of Australians believe its benefits outweigh the
+risks. This trust deficit threatens to leave Australia as a digital outpost, dependent on foreign AI systems and
+lacking sovereign compute capability and data centres, while trailing our competitors in shaping the emerging
+digital landscape.
+The recent National AI Plan (released 2 December 2025) has done little to pave a clear path away from this
+reality, despite Australia being one of the last developed countries to release a national AI plan. To expand
+on the Plan, this paper proposes a series of policies to support AI in Australia that don’t require significant
+government spending or heavy-handed regulation. Instead, we put forward ways to leverage Australia’s
+natural advantages: our educated population, ample space, wealth, strong institutions, and trusted
+international standing. These policies will better position Australia as a leader in AI and ensure we secure a
+proportionate share of the significant global capital being directed towards data centres and compute capability
+— the hardware, energy, and infrastructure required to train and deploy advanced AI systems
+
+
+INTRODUCTION
+he integration of artificial intelligence into critical infrastructure has fundamentally shifted the security paradigm, introducing novel vectors for systemic vulnerability alongside its transformative efficiencies. While the theoretical landscape of adversarial capabilities—ranging from dataset poisoning to privacy inference attacks—is well-documented, real-world data exposures offer the most striking insights into the practical risks facing highly regulated sectors. This section examines key empirical instances where the intersection of public large language model (LLM) deployments and sensitive sector data created severe security and privacy friction. Specifically, we analyze the implications of public data exposures involving OpenAI models, such as the localized leaks found within global conversation datasets like WildChat, to understand how everyday corporate and clinical interactions can inadvertently result in massive data breaches. By evaluating these events through the lens of Australian critical infrastructure, this case study underscores the acute risks posed to patient confidentiality, institutional trust, and sovereign data security within the healthcare ecosystem.
