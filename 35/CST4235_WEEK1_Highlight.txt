@@ -22,13 +22,13 @@ Major examples include Dubai's Smart city strategy, collecting data from Transpo
     - Risks: Location tracking, Profiling, potential of Data Misuse
 
 RESPONSIBILITY: The duty or obligation to fulfill roles, tasks or duties in a reliable accountable way
-    - The core pf Ethica; and moral behaviour
-    - Taking ownership of actions and acknowledging the impact o yourself others and society
+    - The core of Ethical and moral behaviour
+    - Taking ownership of actions and acknowledging the impact of yourself others and society
     eg: - Borrowing a book, returning it is RESPONSIBILITY
         - Locking the door or Not texting while driving, simple self disciplines protecting oneself and others
 
     Imagine the possobility: Data scientist leaks health data,
-        - Patient suffer -privacy violstion, loss of trust ,legal penalties on the organisation; Damage reputation, accountability on the scientists side
+        - Patient suffer -privacy violation, loss of trust ,legal penalties on the organisation; Damage reputation, accountability on the scientists side
 FROM Responsibility to Responsible Ai 
     - Responsible Ai = designing, developing and using Ai in ways that are ethical and fair and accountable
     - It is more than a check list, its about building trust and thinking about the impacts on the society
@@ -43,14 +43,14 @@ Responsible Ai from Isaac Asimov
 - Protect yourself
 - Zeroth Law: Protect humanity as a whole
 
-Law 1: A smart oven should not overheat and cause Fairness
-Law 2: Alexa or Sirishould I follow your command but refuse if you say "order poison"
+Law 1: A smart oven should not overheat and cause Fire
+Law 2: Alexa or Siri should I follow your command but refuse if you say "order poison"
 Law 3: A vaccum robot should not drive down the stairs and break
 Zeroth Law: Traffic Ai should reduce accidents and pollution for everyone, not just make one person's journey faster
 
 Why Responsible Ai Matters in Practice:
 - Technology is a double-bladed sword
-- Risky Use Case: AI in surveillance -> bias in facial recognition/innocsnt people wrongly flagged
+- Risky Use Case: AI in surveillance -> bias in facial recognition/innocent people wrongly flagged
 
 We are looking for: fairness, accountability, transparency and respect for human rights in how Ai is designed and used.
 
@@ -93,7 +93,7 @@ Echo Chambers & Filter Bubbles in Ai: Algorithms keep showing people content sim
     - System should expose users to diverse view points and reliable sources
 
 Principles and Guidelines for Responsible Ai
-    - UNESCO(2021): Global agreement signed by 193 countries, fopcused on human right inclusion and sustainability
+    - UNESCO(2021): Global agreement signed by 193 countries, focused on human right inclusion and sustainability
     - European Comission(2019) : Published Ethic guidelines for trustworthy Ai- Highlighting Transparency, fairness and accountability
     - OECD(2019): 46 countries endorsed principles, Ai should be robust, safe and RESPECT rule of law
     - IEEE(2019): Guiding engineer, researchers/humans to build Ai that puts humans first
@@ -115,7 +115,7 @@ Trust Worthy Ai - 7 requirements
     - Accountability -> Who is accountable, when Ai makes mistakes...somone has to responsible for the Ai outcomes
 
 HUMAN AGENCY and Oversight
-    Human-in-the-loop: Ai could run a diagnosisbut final decision is pulled of by the human expert: The supervisor can intervene in every decision cycle
+    Human-in-the-loop: Ai could run a diagnosis but final decision is pulled of by the human expert: The supervisor can intervene in every decision cycle
     Human-on-the-loop: Human driver can intervene when Ai encounters an unexplainable situation: Human monitors and intervenes when necessary during operations
     Human-in-command: In commercial aviation, auto pilot handles the flight, but pilot retains authority to override case of emergency: Human retain ultimate decision making over Ai systems actvities 
 
@@ -140,19 +140,29 @@ Privacy and Data governance:
                 : Cryptographic hashing of the IDs for taxi drivers not to be identifiable
                 : Use of generalised locations rather than exact GPS coordinates
                 "The Limits of Anonymization
-                        This case demonstrates that traditional anonymization (like data stripping or masking) is insufficient for high-dimensional datasets. Removing direct identifiers like names and phone numbers does not equal true anonymity. When data is rich enough, it can be combined with external, publicly available information (such as celebrity paparazzi photos with visible timestamps, or public check-ins) to reverse-engineer identities. This proves that data can be easily re-identified without ever possessing explicit personal details.
+                        This case demonstrates that traditional anonymization (like data stripping or masking) is insufficient for high-dimensional datasets. Removing direct identifiers like names and phone numbers does not equal true 
+			anonymity. When data is rich enough, it can be combined with external, publicly available information (such as celebrity paparazzi photos with visible timestamps, or public check-ins) 
+			to reverse-engineer identities. This proves that data can be easily re-identified without ever possessing explicit personal details.
                         Why Time-Location Data is Risky
                         Time-location data is inherently dangerous because human mobility patterns are highly unique and predictable.
                         • Quasi-Identifiers: A single coordinate might mean nothing, but a sequence of timestamped locations (e.g., leaving a specific suburban home at 7:30 AM and arriving at a specific office at 8:15 AM) uniquely fingerprints an individual.
                         • Low Entropy of Human Movement: Research shows that just four spatio-temporal points are enough to uniquely identify 95% of individuals in a mobile dataset.
-                        • Sensitive Inferences: Location tracking exposes highly sensitive, private habits, including visits to medical clinics, political rallies, religious venues, or romantic partners, creating immense potential for blackmail, stalking, or corporate surveillance.
-                        What the City Could Do Differently
-                        To balance public research utility with individual privacy, the city could implement the following data protection frameworks:
-                        Strategy	Technical Implementation	How It Protects Privacy
-                        Differential Privacy	Mathematical noise is injected into the dataset before release.	Ensures that an observer cannot definitively prove whether a specific individual's data was included in the dataset, masking exact habits.
-                        Data Aggregation & K-Anonymity	Grouping individual points into broader categories (e.g., rounding pickup times to the nearest 15–30 minutes and grouping locations into larger postal zones/neighborhoods instead of exact GPS coordinates).	Guarantees that an individual's trip looks identical to at least \(k-1\) other people's trips, preventing single-out tracking.
-                        Cryptographic Hashing with Salt	Instead of poorly masked or raw driver IDs, use strong, salted cryptographic hash functions changed frequently.	In the actual NYC case, driver IDs were hashed using MD5 without a salt, allowing researchers to easily crack them via brute-force. Proper salting prevents this.
-                        Tiered Access / Synthetic Data	Releasing entirely artificial "synthetic datasets" that mimic real traffic patterns for general public research, while restricting raw data to a secure virtual enclave for vetted researchers.	Keeps raw location data entirely out of the public domain while still providing statistical utility for urban planning."
+                        • Sensitive Inferences: Location tracking exposes highly sensitive, private habits, including visits to medical clinics, political rallies, religious venues, or romantic partners, 
+						creating immense potential for blackmail, stalking, or corporate surveillance.
+                        What the City Could Do Differently:To balance public research utility with individual privacy, 
+								the city could implement the following data protection frameworks:
+Strategy			Technical Implementation						How It Protects Privacy
+_______________________________|_______________________________________________________________________|______________________________
+Differential Privacy		Mathematical noise is injected into the dataset before release.		Ensures that an observer cannot definitively prove whether a specific individual's data was included in the dataset, masking exact habits.
+Data Aggregation & K-Anonymity	Grouping individual points into broader categories 			Guarantees that an individual's trip looks identical to at least \(k-1\) other people's trips, preventing single-out tracking.
+				(e.g., rounding pickup times to the nearest 15–30 minutes and 
+					grouping locations into larger postal zones/neighborhoods
+					instead of exact GPS coordinates).	
+Cryptographic Hashing with Salt	In the actual NYC case, driver IDs were hashed using MD5 without a salt, Proper salting prevents this.
+Instead of poorly masked or 	 allowing researchers to easily crack them via brute-force.
+raw driver IDs,use strong, 
+salted cryptographic hash functions changed frequently.	
+Tiered Access / Synthetic Data	Releasing entirely artificial "synthetic datasets" that mimic real traffic patterns for general public research, while restricting raw data to a secure virtual enclave for vetted researchers.	Keeps raw location data entirely out of the public domain while still providing statistical utility for urban planning."
 Privacy and Data Governance:
     NETFLIX Prize(2006)
         - Lauched to improve recomendation system
@@ -162,8 +172,8 @@ Privacy and Data Governance:
                         - By using dataset from Netflix and cross referencing it with a public IMDb dataset
         - Findings: Re-identification was possible
             - wHY was it possible, despite anonymisation?
-            - How do external datasets llike IMDb pose a threat
-            - What safe uards could be used?               
+            - How do external datasets like IMDb pose a threat
+            - What safe Guards could be used?               
 
 Diversity, Non-discrimination and Fairness.
     - AI should be fair and unbiased across data, design and deployment
@@ -171,11 +181,11 @@ Diversity, Non-discrimination and Fairness.
     - AI systms must be accessible to all including people with disabilities
     - Invoke diverse stakeholders throughout the Ai-lifecycle
     CASE: Sansa Voice Translation
-        - Voice synthesizer can remove non-American accent in real-time but has critics claiming it is white-washing or playing intov racism
-        - Findigns: should workers have to change their accent to be treated fairly?
+        - Voice synthesizer can remove non-American accent in real-time but has critics claiming it is white-washing or playing into racism
+        - Findings: should workers have to change their accent to be treated fairly?
                     - Is this a fair solution or an unfair burden on the workers? 
                         : If company's profitability and image is on the line, then definately. Also it is somthing that can be humanly adjusted unlike skin.
-                          Here's the thing if a company requires one to learn Math, English, Korean literature, it is upto the stadff to keep up with the standard, if not..leaving is always an option
+                          Here's the thing if a company requires one to learn Math, English, Korean literature, it is upto the staff to keep up with the standard, if not..leaving is always an option
                     - Is the tool racist or is it just a temporary fix until people's atitude improve?
                         : People's attitude need to improve, since the whole sense of its existance is to make peoples lives better no matter the case, that is the initial instruction. 
                             Now if that will require white wasahing then blame the user base
@@ -186,9 +196,9 @@ SOCIETAL and Environmental Welbeing
                                                                 - Fair
                                                                 - Environmentally responsible
 
-    - Positive impact - Deep Mind & Google DAta Centers (2016)
-        - Ai optimoized to cool systems in Google's Datacenters
-        : REsulting- 40% reduction in energy usage
+    - Positive impact - Deep Mind & Google Data Centers (2016)
+        - Ai optimized to cool systems in Google's Datacenters
+        : Resulting- 40% reduction in energy usage
         : Demonstrating how Ai could lower the Carbon Footprint
     - Negative Impact - Volkswagen Emission Scandle(2015)
         - VW used the Ai/Software to cheat /emissions tests
@@ -210,7 +220,7 @@ Accountability
             Mirosoft issued public apology, after damage was done 
     Lesson:
         Accountability: Before and After
-            Before: Clear ROles, Testing, Oversight and responsible design
+            Before: Clear Roles, Testing, Oversight and responsible design
             After: owning failures transparently, explaining what went wrong and setting up safe guards to prevent recurrance
              
     

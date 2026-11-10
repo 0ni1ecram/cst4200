@@ -1,0 +1,145 @@
+Lab Manual: Exploring Adversarial Examples with FGSM
+Module: Ethics, Privacy and Security in Data Science & AI
+Week 2
+
+Learning Objectives
+By the end of this lab, students will be able to:
+1.	Understand what adversarial examples are and why they matter in AI security.
+2.	Experiment with generating perturbed images using the FGSM (Fast Gradient Sign Method).
+3.	Observe how changing a single parameter (eps) affects the robustness of AI models.
+4.	Reflect on the ethical and security implications of adversarial attacks.
+
+Background 
+Machine Learning models can be fooled by small, carefully designed changes to their inputs.
+•	These changes are imperceptible to humans but can cause the model to misclassify.
+•	This raises serious concerns for areas like self-driving cars, medical imaging, and facial recognition.
+
+In this lab, you will explore this phenomenon using a model trained on the MNIST digit dataset.
+
+Step 1: Setup 
+1.	Open Google Colab at https://colab.research.google.com.
+2.	Create a new notebook.
+3.	Upload the provided model file: lenet_mnist_model.pth.pt
+
+
+Step 2: Cell 1  Setup & Model Loading
+
+Paste and run this code block:
+
+import torch, torch.nn as nn, torch.nn.functional as F
+from torchvision import datasets, transforms
+
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, 3, 1)   # matches your checkpoint
+        self.conv2 = nn.Conv2d(32, 64, 3, 1)  # matches your checkpoint
+        self.dropout1 = nn.Dropout(0.25)
+        self.dropout2 = nn.Dropout(0.5)
+        self.fc1 = nn.Linear(9216, 128)       # matches your checkpoint
+        self.fc2 = nn.Linear(128, 10)         # matches your checkpoint
+    def forward(self, x):
+        x = F.relu(self.conv1(x)); x = F.relu(self.conv2(x))
+        x = F.max_pool2d(x, 2); x = self.dropout1(x)
+        x = torch.flatten(x, 1)
+        x = F.relu(self.fc1(x)); x = self.dropout2(x)
+        x = self.fc2(x)
+        return F.log_softmax(x, dim=1)
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = Net().to(device)
+
+state = torch.load("/content/lenet_mnist_model.pth.pt", map_location=device)
+model.load_state_dict(state)
+model.eval()
+
+test_loader = torch.utils.data.DataLoader(
+    datasets.MNIST(root="../data", train=False, download=True,
+                   transform=transforms.Compose([
+                       transforms.ToTensor(),
+                       transforms.Normalize((0.1307,), (0.3081,))
+                   ])),
+    batch_size=1, shuffle=True
+)
+print("Ready. CUDA available:", torch.cuda.is_available())
+
+Step 3 – Cell 2: FGSM Attack Experiment
+
+Paste and run this code block:
+
+# Cell 2: FGSM Adversarial Attack
+import matplotlib.pyplot as plt
+from torchvision import transforms as T
+
+# Change this value to see different effects
+eps = 0.00  # try 0.05, 0.10, 0.15, 0.20, 0.25, 0.30 ...
+
+# Normalisation helpers
+denorm = lambda x: x*0.3081 + 0.1307
+renorm = T.Normalize((0.1307,), (0.3081,))
+
+# Pick one correctly classified sample
+for data, target in test_loader:
+    data, target = data.to(device), target.to(device)
+    with torch.no_grad():
+        if model(data).argmax(1).item() == target.item():
+            break
+
+# Compute gradient wrt input
+data.requires_grad = True
+out = model(data)
+pred_before = out.argmax(1).item()
+loss = F.nll_loss(out, target)
+model.zero_grad(); loss.backward()
+grad = data.grad.data
+
+# Create adversarial version
+x_den = denorm(data)
+x_adv = torch.clamp(x_den + eps * grad.sign(), 0, 1)
+x_adv_n = renorm(x_adv)
+pred_after = model(x_adv_n).argmax(1).item()
+
+print(f"True: {target.item()} | Before attack: {pred_before} | After attack: {pred_after} | eps={eps}")
+
+# Show images
+plt.figure(figsize=(6,3))
+plt.subplot(1,2,1); plt.title(f"Original = {pred_before}"); plt.axis("off"); plt.imshow(x_den.squeeze().detach().cpu(), cmap="gray")
+plt.subplot(1,2,2); plt.title(f"Perturbed = {pred_after}"); plt.axis("off"); plt.imshow(x_adv.squeeze().detach().cpu(), cmap="gray")
+plt.tight_layout(); plt.show()
+
+Step 4: Generating Adversarial Examples (25 minutes)
+You will now attack the model using FGSM.
+1. Locate the cell in your notebook with the line (eps)
+2. Change the value of eps and re-run the cell for one eps atleast 3 time. Try these values one by one: 0.00 (no attack), 0.05, 0.10, 0.15, 0.20, 0.30
+3. For each run, note: The true label, The model’s prediction before perturbation, The model’s prediction after perturbation, Whether the perturbation was visible to your eye.
+
+Each run will display two images side by side:
+• Left: the original digit.
+• Right: the perturbed digit.
+
+Step 5: Complete the table
+
++---------+-------------------------+------------------------+---------------------+
+| Epsilon | Model Prediction Before | Model Prediction After | Visible Change? Y/N |
++---------+-------------------------+------------------------+---------------------+
+| 0.00    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+| 0.05    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+| 0.10    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+| 0.15    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+| 0.20    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+| 0.30    |                         |                        |                     |
++---------+-------------------------+------------------------+---------------------+
+
+Step 6: Discuss in groups or reflect individually:
+1.	At what eps value did the image first become visibly distorted?
+2.	At what eps value did the model first misclassify?
+3.	How does this illustrate vulnerabilities in AI systems?
+4.	What ethical issues might arise if adversarial attacks are used in: Autonomous driving, Healthcare AI and Security systems
+
+
+
