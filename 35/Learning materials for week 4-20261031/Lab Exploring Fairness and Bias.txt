@@ -1,0 +1,200 @@
+Lab: Exploring Fairness and Bias in a Dataset 
+
+
+Learning Outcomes
+
+By the end of this lab, you can:
+
+Load and explore a dataset using Python.
+
+Identify target and sensitive variables.
+
+Calculate and interpret simple fairness metrics.
+
+Recognise signs of bias in real-world data.
+
+Reflect on ethical data handling and model fairness.
+
+
+Step 1 — Import the Required Libraries
+# Import libraries for data handling and visualisation
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Make visualisations look nicer
+plt.style.use('seaborn-v0_8')
+
+Step 2 — Load the Dataset
+# Load the Adult Income dataset from OpenML
+from sklearn.datasets import fetch_openml
+
+data = fetch_openml(data_id=1590, as_frame=True)
+df = data.frame.copy()  # Convert it into a pandas DataFrame
+
+# Display the first 5 rows to understand the data
+df.head()
+
+
+Explanation:
+Each row represents one person, and each column (feature) is an attribute like age, gender, education, etc.
+The ‘class’ column is the target variable — it tells whether a person earns more than 50K (>50K) or less (<=50K).
+
+Step 3 — Explore the Dataset Structure
+# Check general info (column names, types, missing values)
+df.info()
+
+# Show statistical summary for both numerical and categorical columns
+df.describe(include='all').T
+
+Explanation:
+
+.info() helps find missing data.
+
+.describe() gives an overview of the data — means, counts, unique values, etc.
+
+Step 4 — Check the Target Variable (‘class’)
+# Let's see how many people earn more than 50K and how many earn less or equal
+sns.countplot(x='class', data=df)
+plt.title('Income Distribution (Target Variable)')
+plt.xlabel('Income Category')
+plt.ylabel('Count')
+plt.show()
+
+
+Explanation:
+This plot shows the number of people earning >50K vs. <=50K.
+If one group dominates, the dataset is imbalanced — a common issue that can affect fairness.
+
+Step 5 — Check Gender Distribution
+# Visualise how many males and females are in the dataset
+sns.countplot(x='sex', data=df)
+plt.title('Gender Distribution')
+plt.xlabel('Gender')
+plt.ylabel('Count')
+plt.show()
+
+
+Explanation:
+If one gender group (for example, “Male”) appears much more often, the model may learn biased patterns.
+
+Step 6 — Compare Income Rate by Gender
+# Calculate the percentage of people earning >50K for each gender
+selection_rate = df.groupby('sex')['class'].apply(lambda x: (x == '>50K').mean() * 100)
+
+# Show the rates clearly
+print("Selection Rate by Gender (percentage earning >50K):")
+print(selection_rate)
+
+
+Explanation:
+This tells us what percentage of men and women earn more than 50K.
+If the gap is large, it might indicate historical bias in the data.
+
+Step 7 — Check Fairness with the 80% Rule
+# Extract the rates for men and women
+male_rate = selection_rate['Male']
+female_rate = selection_rate['Female']
+
+# Compute Disparate Impact (DI)
+disparate_impact = female_rate / male_rate
+
+# Print results
+print(f"Male selection rate (>50K): {male_rate:.2f}%")
+print(f"Female selection rate (>50K): {female_rate:.2f}%")
+print(f"Disparate Impact (Female/Male): {disparate_impact:.2f}")
+
+# Interpret fairness based on 80% rule
+if disparate_impact < 0.8:
+    print("Potential unfairness detected! (DI < 0.8 means possible bias)")
+else:
+    print("Fair representation between genders (DI ≥ 0.8)")
+
+
+Explanation:
+
+Disparate Impact (DI) = (favorable rate of minority group) ÷ (favorable rate of majority group).
+
+If DI < 0.8, it may indicate bias. This is called the “four-fifths rule”.
+
+Step 8 — Visualise Income by Gender
+# Create a new column for numeric income: 1 if >50K, 0 if <=50K
+df['income_binary'] = (df['class'] == '>50K').astype(int)
+
+# Plot average income (as 1/0) per gender
+sns.barplot(x='sex', y='income_binary', data=df)
+plt.title('Average Rate of High Income (>50K) by Gender')
+plt.ylabel('Proportion earning >50K')
+plt.show()
+
+
+Explanation:
+This chart shows how often each gender earns more than 50K — visually highlighting the gap.
+
+Step 9 — Optional: Check Bias by Race
+# Show how income varies by race
+sns.barplot(x='race', y='income_binary', data=df)
+plt.title('Average Rate of High Income (>50K) by Race')
+plt.ylabel('Proportion earning >50K')
+plt.xticks(rotation=30)
+plt.show()
+
+
+Explanation:
+Bias can also occur by race, age, or other sensitive features — not just gender.
+
+Step 10 — Print a Summary of Findings
+print("=== Summary of Findings ===")
+print(f"- Total records: {len(df)}")
+print(f"- Male selection rate (>50K): {male_rate:.2f}%")
+print(f"- Female selection rate (>50K): {female_rate:.2f}%")
+print(f"- Disparate Impact (Female/Male): {disparate_impact:.2f}")
+
+if disparate_impact < 0.8:
+    print("- Possible gender bias detected in the dataset.")
+    print("- Next steps: rebalance data, include fairness metrics in training, or apply bias mitigation techniques.")
+else:
+    print("- Dataset appears balanced between genders.")
+    print("- Still check other factors such as race, education, and age.")
+
+
+
+# Step 11 — Simple Bias Mitigation Example
+
+# Check gender balance before mitigation
+print("Before balancing:")
+print(df['sex'].value_counts())
+
+# Split dataset into male and female groups
+male_df = df[df['sex'] == 'Male']
+female_df = df[df['sex'] == 'Female']
+
+# Downsample the larger group (to match the smaller one)
+min_size = min(len(male_df), len(female_df))
+
+male_balanced = male_df.sample(min_size, random_state=42)
+female_balanced = female_df.sample(min_size, random_state=42)
+
+# Combine the two balanced subsets
+balanced_df = pd.concat([male_balanced, female_balanced])
+
+print("\nAfter balancing:")
+print(balanced_df['sex'].value_counts())
+
+# Check again the fairness between genders (same as before)
+selection_rate_balanced = balanced_df.groupby('sex')['class'].apply(lambda x: (x == '>50K').mean() * 100)
+male_rate_b = selection_rate_balanced['Male']
+female_rate_b = selection_rate_balanced['Female']
+disparate_impact_b = female_rate_b / male_rate_b
+
+print("\n=== Fairness After Balancing ===")
+print(f"Male selection rate: {male_rate_b:.2f}%")
+print(f"Female selection rate: {female_rate_b:.2f}%")
+print(f"Disparate Impact (Female/Male): {disparate_impact_b:.2f}")
+
+if disparate_impact_b < 0.8:
+    print("Bias still exists — more advanced mitigation may be needed.")
+else:
+    print("Bias improved! Balanced dataset leads to fairer representation.")
+
