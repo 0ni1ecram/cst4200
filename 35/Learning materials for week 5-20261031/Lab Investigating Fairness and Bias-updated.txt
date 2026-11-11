@@ -1,0 +1,156 @@
+Lab: Investigating Fairness and Bias in AI Models
+
+Objective
+In this lab, you will explore how bias can exist in machine learning models even when sensitive variables such as gender, region, or socio-economic background are not explicitly used. You will train a simple model, analyse its predictions across different groups, and observe how removing certain features affects fairness.
+
+Step 1: Setup and Data Loading
+
+We begin by importing the required libraries and creating the dataset directly in code instead of reading from a CSV file.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Create synthetic dataset
+np.random.seed(42)
+n = 200  # number of samples
+
+df = pd.DataFrame({
+    'Gender': np.random.choice(['Male', 'Female'], n),
+    'Region': np.random.choice(['Urban', 'Rural'], n),
+    'SocioEconomic': np.random.choice(['Low', 'Medium', 'High'], n, p=[0.3, 0.5, 0.2]),
+    'Experience': np.random.randint(0, 15, n),
+    'Education': np.random.choice(['Bachelors', 'Masters', 'PhD'], n, p=[0.6, 0.3, 0.1]),
+})
+
+# Add target variable with a small bias for demonstration
+df['Shortlisted'] = np.where(
+    (df['Gender'] == 'Male') & (df['Region'] == 'Urban') & (df['Education'] != 'Bachelors'),
+    1,
+    np.random.choice([0, 1], n, p=[0.6, 0.4])
+)
+
+df.head()
+
+
+The dataset now contains these features:
+
+Gender
+
+Region (Urban/Rural)
+
+Socio-economic background
+
+Years of experience
+
+Education level
+
+Shortlisted (1 = Yes, 0 = No)
+
+Step 2: Data Preparation
+
+Convert categorical variables to numeric format for model training.
+
+df = pd.get_dummies(df, drop_first=True)
+X = df.drop('Shortlisted', axis=1)
+y = df['Shortlisted']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+Step 3: Model Training and Evaluation
+
+Train a logistic regression model to predict shortlisting decisions.
+
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, y_pred))
+
+
+Accuracy gives a sense of overall model performance — but not fairness.
+
+Step 4: Fairness Evaluation by Group
+
+We examine whether the model’s predictions differ across groups (e.g., by gender or region).
+
+X_test_copy = X_test.copy()
+X_test_copy['predicted'] = model.predict(X_test)
+X_test_copy['gender'] = df.loc[X_test.index, 'Gender_Male']
+X_test_copy['region'] = df.loc[X_test.index, 'Region_Urban']
+
+# Visualise predictions by group
+sns.barplot(x='gender', y='predicted', data=X_test_copy)
+plt.title('Predicted Shortlisting by Gender')
+plt.xlabel('Gender (0 = Female, 1 = Male)')
+plt.ylabel('Average Prediction (1 = Shortlisted)')
+plt.show()
+
+# Repeat for region
+sns.barplot(x='region', y='predicted', data=X_test_copy)
+plt.title('Predicted Shortlisting by Region')
+plt.xlabel('Region (0 = Rural, 1 = Urban)')
+plt.ylabel('Average Prediction (1 = Shortlisted)')
+plt.show()
+
+If the bars differ substantially, the model may be unfairly biased toward one group.
+
+Step 5: Removing a Sensitive Feature
+
+Now, remove a potentially sensitive variable (for instance, Region) to observe how the model behaves without it.
+
+X_no_region = X.drop(['Region_Urban'], axis=1)
+X_train_nr, X_test_nr, y_train_nr, y_test_nr = train_test_split(X_no_region, y, test_size=0.3, random_state=42)
+
+model_nr = LogisticRegression(max_iter=1000)
+model_nr.fit(X_train_nr, y_train_nr)
+
+X_test_copy['predicted_no_region'] = model_nr.predict(X_test_nr)
+
+sns.barplot(x='region', y='predicted_no_region', data=X_test_copy)
+plt.title('Predicted Shortlisting by Region (After Removing Region Feature)')
+plt.xlabel('Region (0 = Rural, 1 = Urban)')
+plt.ylabel('Average Prediction (1 = Shortlisted)')
+plt.show()
+
+Step 6: Visual Fairness Comparison (Before vs After)
+
+Compare both models side by side to understand fairness impact.
+
+fig, axes = plt.subplots(1, 2, figsize=(10, 4))
+
+sns.barplot(x='region', y='predicted', data=X_test_copy, ax=axes[0])
+axes[0].set_title('Before Removing Region')
+axes[0].set_xticklabels(['Rural', 'Urban'])
+axes[0].set_ylabel('Avg Prediction')
+
+sns.barplot(x='region', y='predicted_no_region', data=X_test_copy, ax=axes[1])
+axes[1].set_title('After Removing Region')
+axes[1].set_xticklabels(['Rural', 'Urban'])
+axes[1].set_ylabel('Avg Prediction')
+
+plt.suptitle('Fairness Comparison Before and After Removing Region Feature')
+plt.tight_layout()
+plt.show()
+
+Step 7: Proxy Bias
+
+Even though the Region variable was removed, you may still observe that urban candidates have a higher predicted shortlisting rate.
+This happens because the model has learned indirectly correlated patterns through other features such as:
+
+Education level
+
+Experience years
+
+Socio-economic background
+
+These act as proxy variables, allowing bias to persist even when sensitive features are excluded.
+
+Final Question
+
+If the model still shows bias after removing a sensitive feature (like region or gender), what does that reveal about the nature of bias in AI systems?
+Can bias be completely eliminated — or does it require addressing the underlying data, context, and correlations that act as hidden proxies?

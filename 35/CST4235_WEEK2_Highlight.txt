@@ -4,7 +4,7 @@ Trustworthy AI -7 requirements
     - Privacy & Data Governance -> Protect, protect personal / individual user data
     - Transparency -> Clear Explanation on how the decision came to be
     - Diversity, Non-Discrimination and Fairness -> avoid Bias
-    - Societal and Environmental Welll being -> Benefits Society as a whole
+    - Societal and Environmental Well being -> Benefits Society as a whole
     - Accountability -> Someone has to be responsible when Ai misbehaves
 
 AI Robustness and Safety
