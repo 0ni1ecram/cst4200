@@ -1,0 +1,97 @@
+country_name,city_name,specific_location,latitude,longitude,category
+USA,New York,Times Square,40.7580,-73.9855,tourist place
+USA,New York,Financial District,40.7075,-74.0092,popular delivery zone
+USA,Washington D.C.,The White House,38.8977,-77.0365,capital
+USA,Los Angeles,Hollywood Walk of Fame,34.1016,-118.3268,tourist place
+USA,Chicago,The Loop,41.8818,-87.6232,popular delivery zone
+UK,London,Buckingham Palace,51.5014,-0.1419,capital
+UK,London,Canary Wharf,51.5033,-0.0185,popular delivery zone
+UK,Edinburgh,Edinburgh Castle,55.9486,-3.1999,tourist place
+France,Paris,Eiffel Tower,48.8584,2.2945,tourist place
+France,Paris,La Défense,48.8926,2.2384,popular delivery zone
+France,Paris,Élysée Palace,48.8704,2.3168,capital
+Japan,Tokyo,Shibuya Crossing,35.6595,139.7005,popular delivery zone
+Japan,Tokyo,Imperial Palace,35.6852,139.7528,capital
+Japan,Kyoto,Kinkaku-ji (Golden Pavilion),35.0394,135.7292,tourist place
+Canada,Ottawa,Parliament Hill,45.4247,-75.6950,capital
+Canada,Toronto,CN Tower,43.6426,-79.3871,tourist place
+Canada,Vancouver,Gastown,49.2833,-123.1037,popular delivery zone
+Australia,Canberra,Parliament House, -35.3080,149.1244,capital
+Australia,Sydney,Sydney Opera House,-33.8568,151.2153,tourist place
+Australia,Melbourne,Federation Square,-37.8179,144.9691,popular delivery zone
+Germany,Berlin,Brandenburg Gate,52.5163,13.3777,capital
+Germany,Munich,Marienplatz,48.1372,11.5755,tourist place
+Germany,Frankfurt,Bankenviertel,50.1109,8.6821,popular delivery zone
+India,New Delhi,India Gate,28.6129,77.2295,capital
+India,Mumbai,Gateway of India,18.9220,72.8347,tourist place
+India,Bangalore,Koramangala,12.9352,77.6245,popular delivery zone
+Brazil,Brasília,National Congress of Brazil,-15.7998,-47.8645,capital
+Brazil,Rio de Janeiro,Christ the Redeemer,-22.9519,-43.2105,tourist place
+Brazil,São Paulo,Paulista Avenue,-23.5613,-46.6565,popular delivery zone
+China,Beijing,Forbidden City,39.9163,116.3972,capital
+China,Shanghai,The Bund,31.2393,121.4839,tourist place
+China,Shenzhen,Huaqiangbei,22.5435,114.0883,popular delivery zone
+Russia,Moscow,Red Square,55.7539,37.6208,capital
+Russia,Saint Petersburg,Hermitage Museum,59.9398,30.3146,tourist place
+South Africa,Pretoria,Union Buildings,-25.7423,28.2124,capital
+South Africa,Cape Town,Table Mountain,-33.9626,18.4037,tourist place
+South Africa,Johannesburg,Sandton,-26.1076,28.0567,popular delivery zone
+Egypt,Cairo,Pyramids of Giza,29.9792,31.1342,tourist place
+Egypt,Cairo,Khan el-Khalili,30.0478,31.2623,popular delivery zone
+Egypt,Cairo,Tahrir Square,30.0444,31.2357,capital
+Italy,Rome,Colosseum,41.8902,12.4922,tourist place
+Italy,Rome,Vatican City,41.9029,12.4534,capital
+Italy,Milan,Piazza del Duomo,45.4642,9.1900,tourist place
+Italy,Milan,Porta Nuova District,45.4831,9.1912,popular delivery aone
+Spain,Madrid,Puerta del Sol,40.4168,-3.7038,capital
+Spain,Barcelona,Sagrada Família,41.4036,2.1744,tourist place
+Spain,Ibiza,Ibiza Town,38.9067,1.4329,tourist place
+Argentina,Buenos Aires,Plaza de Mayo,-34.6083,-58.3712,capital
+Argentina,Buenos Aires,La Boca,-34.6350,-58.3643,tourist place
+Mexico,Mexico City,Zócalo,19.4326,-99.1332,capital
+Mexico,Cancún,Hotel Zone,21.1310,-86.7725,tourist place
+United Arab Emirates,Abu Dhabi,Sheikh Zayed Grand Mosque,24.4128,54.4749,capital
+United Arab Emirates,Dubai,Burj Khalifa,25.1972,55.2744,tourist place
+United Arab Emirates,Dubai,Dubai Marina,25.0779,55.1364,popular delivery zone
+Singapore,Singapore,Marina Bay Sands,1.2834,103.8601,tourist place
+Singapore,Singapore,Orchard Road,1.3048,103.8318,popular delivery zone
+Singapore,Singapore,Parliament of Singapore,1.2895,103.8515,capital
+Turkey,Ankara,Anıtkabir,39.9252,32.8370,capital
+Turkey,Istanbul,Hagia Sophia,41.0086,28.9802,tourist place
+Turkey,Istanbul,Levent,41.0776,29.0120,popular delivery zone
+Netherlands,Amsterdam,Rijksmuseum,52.3600,4.8852,tourist place
+Netherlands,Amsterdam,De Pijp,52.3547,4.8931,popular delivery zone
+Netherlands,The Hague,Binnenhof,52.0799,4.3134,capital
+Greece,Athens,Acropolis,37.9715,23.7257,capital
+Greece,Santorini,Oia,36.4617,25.3755,tourist place
+Greece,Thessaloniki,Aristotelous Square,40.6322,22.9405,popular delivery zone
+Thailand,Bangkok,Grand Palace,13.7500,100.4914,capital
+Thailand,Phuket,Patong Beach,7.8942,98.2957,tourist place
+Thailand,Chiang Mai,Old City,18.7880,98.9863,popular delivery zone
+South Korea,Seoul,Gyeongbokgung Palace,37.5796,126.9770,capital
+South Korea,Seoul,Gangnam District,37.5172,127.0473,popular delivery zone
+South Korea,Busan,Haeundae Beach,35.1587,129.1604,tourist place
+New Zealand,Wellington,New Zealand Parliament Buildings,-41.2785,174.7766,capital
+New Zealand,Auckland,Sky Tower,-36.8485,174.7622,tourist place
+New Zealand,Queenstown,Lake Wakatipu,-45.0203,168.6896,tourist place
+Ireland,Dublin,Guinness Storehouse,53.3419,-6.2867,tourist place
+Ireland,Dublin,Temple Bar,53.3453,-6.2657,popular delivery zone
+Ireland,Dublin,Leinster House,53.3396,-6.2520,capital
+Portugal,Lisbon,Belém Tower,38.6916,-9.2160,capital
+Portugal,Porto,Ribeira District,41.1408,-8.6133,tourist place
+Portugal,Algarve,Praia da Marinha,37.0898,-8.4128,tourist place
+Sweden,Stockholm,Gamla Stan (Old Town),59.3251,18.0711,capital
+Sweden,Gothenburg,Liseberg,57.6953,11.9922,tourist place
+Norway,Oslo,Royal Palace,59.9169,10.7275,capital
+Norway,Bergen,Bryggen,60.3970,5.3241,tourist place
+Finland,Helsinki,Helsinki Cathedral,60.1699,24.9526,capital
+Finland,Rovaniemi,Santa Claus Village,66.5436,25.8455,tourist place
+Denmark,Copenhagen,Nyhavn,55.6798,12.5901,tourist place
+Denmark,Copenhagen,Christiansborg Palace,55.6759,12.5798,capital
+Switzerland,Bern,Old City of Bern,46.9479,7.4474,capital
+Switzerland,Geneva,Jet d'Eau,46.2081,6.1558,tourist place
+Switzerland,Zurich,Bahnhofstrasse,47.3718,8.5392,popular delivery zone
+Austria,Vienna,Schönbrunn Palace,48.1848,16.3122,capital
+Austria,Salzburg,Hohensalzburg Fortress,47.7943,13.0474,tourist place
+Belgium,Brussels,Grand-Place,50.8467,4.3525,capital
+Belgium,Bruges,Historic Centre of Bruges,51.2089,3.2244,tourist place

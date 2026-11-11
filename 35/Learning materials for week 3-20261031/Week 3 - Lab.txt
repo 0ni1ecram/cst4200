@@ -1,0 +1,149 @@
+Lab: Differential Privacy in Deep Learning using DP-SGD (with Opacus)
+
+Key Terms
+Term	Description
+ε (Epsilon)	Privacy loss measure. Lower = stronger privacy
+δ (Delta)	Probability that privacy loss exceeds ε
+σ (Noise Multiplier)	Controls noise level. Higher σ = more noise = smaller ε = stronger privacy
+C (Max Grad Norm)	Gradient clipping threshold to bound sensitivity
+
+Setup Instructions (Colab)
+
+Go to Google Colab
+
+Create a new Python 3 notebook.
+
+Paste the following code into the first cell and run it:
+
+# DP-SGD on MNIST with Opacus (works on Colab Python 3.12)
+%pip install --quiet torch torchvision opacus
+
+import torch
+from torch import nn, optim
+from torch.utils.data import DataLoader
+from torchvision import datasets, transforms
+from opacus import PrivacyEngine
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
+# Data
+transform = transforms.Compose([transforms.ToTensor()])
+train = datasets.MNIST(root=".", train=True,  download=True, transform=transform)
+test  = datasets.MNIST(root=".", train=False, download=True, transform=transform)
+train_loader = DataLoader(train, batch_size=256, shuffle=True, drop_last=True)
+test_loader  = DataLoader(test,  batch_size=1024, shuffle=False)
+
+# Model
+class MLP(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.net = nn.Sequential(nn.Flatten(), nn.Linear(28*28,128), nn.ReLU(), nn.Linear(128,10))
+    def forward(self, x): return self.net(x)
+
+model = MLP().to(device)
+optimizer = optim.SGD(model.parameters(), lr=0.15)
+criterion = nn.CrossEntropyLoss()
+
+# Make training private (set noise directly; we'll measure ε after)
+noise_multiplier = 2   # ↑ more noise => smaller ε (more privacy), usually lower accuracy
+max_grad_norm   = 1.0
+delta = 1e-5
+
+privacy_engine = PrivacyEngine()
+model, optimizer, train_loader = privacy_engine.make_private(
+    module=model,
+    optimizer=optimizer,
+    data_loader=train_loader,
+    noise_multiplier=noise_multiplier,
+    max_grad_norm=max_grad_norm,
+)
+
+# Train 1 epoch
+model.train()
+for x, y in train_loader:
+    x, y = x.to(device), y.to(device)
+    optimizer.zero_grad()
+    loss = criterion(model(x), y)
+    loss.backward()
+    optimizer.step()
+
+# Evaluate
+model.eval()
+correct = total = 0
+with torch.no_grad():
+    for x, y in test_loader:
+        x, y = x.to(device), y.to(device)
+        pred = model(x).argmax(1)
+        correct += (pred == y).sum().item()
+        total   += y.size(0)
+acc = correct / total
+
+# Privacy spent (ε)
+eps = privacy_engine.get_epsilon(delta=delta)
+print(f"Accuracy: {acc:.3f}")
+print(f"Epsilon:  {eps:.2f}  (delta={delta}, noise={noise_multiplier}, C={max_grad_norm})")
+
+Tasks
+
+Task 1:
+Run the notebook as-is and record:
+
+Model Accuracy
+
+Epsilon (ε) value
+
+Task 2:
+Change the line:
+
+noise_multiplier = 2
+
+
+to:
+
+noise_multiplier = 1
+
+
+and re-run the entire notebook.
+Compare the accuracy and ε values.
+
+Task 3:
+Repeat again with:
+
+noise_multiplier = 0.7
+
+
+and observe changes.
+
+Task 4:
+Create a simple table in your report:
+
+Noise Multiplier (σ)	Accuracy	Epsilon (ε)	Privacy Strength
+2.0	...	...	Strong
+1.0	...	...	Moderate
+0.7	...	...	Weak
+Discussion Questions
+
+What trend do you observe between noise multiplier and epsilon?
+
+Why does accuracy typically decrease when you increase the noise multiplier?
+
+What trade-off does DP introduce in machine learning models?
+
+In real-world applications (e.g., healthcare, finance), when would you prefer higher noise despite lower accuracy?
+
+How can we balance model utility and privacy?
+
+Extension (Optional for Advanced Students)
+
+Run for 3 epochs by replacing:
+
+for x, y in train_loader:
+
+
+with:
+
+for epoch in range(3):
+    for x, y in train_loader:
+
+
+and compare ε and accuracy across epochs.
