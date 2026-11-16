@@ -176,7 +176,7 @@ A valuable business agent cannot operate in an isolated silo; it must actively p
 
 3. Autonomy, Adaptability, and Self-Correction
 
-Judges look at how the agent handles the unpredictable nature of daily business operations.
+Focus----- how the agent handles the unpredictable nature of daily business operations.
 • Dynamic Planning: The capability to break a vague business goal (e.g., "Find out why Q3 shipping costs spiked") into a logical, multi-step investigation plan.
 • Exception Handling: How the agent responds when a system fails. Rather than crashing if an API returns an error or a webpage layout changes, the agent should dynamically adapt, alter its path, or retry the task logically.
 • Strategic Human-in-the-Loop (HITL): A sophisticated understanding of when to act autonomously and exactly when to halt and ask a human for approval (e.g., before executing a high-value financial transaction or sending a live contract to a client).
@@ -188,11 +188,9 @@ An agent that poses a security risk is a liability, no matter how fast it works.
 • Auditability & Transparency: A clear, human-readable log of the agent's reasoning process and actions so human managers can easily audit why it made a specific corporate decision.
 • Data Privacy: Strict adherence to data security standards, showing that customer data or proprietary company information is handled securely and ethically.
 
-Summary Table for Judges
 
-
-Evaluation Metric	Weak Business Entry	Winning Business Entry
-Architectural Depth	A simple prompt wrapper built on top of a commercial API.	A multi-agent framework with long-term memory, RAG, and self-correcting code execution loops.
-Process Reach	Standard "if-then" single-app automation.	End-to-end management of complex workflows across 3+ enterprise applications.
-Business Value	Saves an individual employee a few minutes a day on writing emails.	Restructures entire departmental operations, dropping process times from days to minutes.
+Evaluation Metric	Weak Business Entry	                                                |Winning Business Entry
+Architectural       Depth	A simple prompt wrapper built on top of a commercial API.	|A multi-agent framework with long-term memory, RAG, and self-correcting code execution loops.
+Process Reach	    Standard "if-then" single-app automation.	                        |End-to-end management of complex workflows across 3+ enterprise applications.
+Business Value	    Saves an individual employee a few minutes a day on writing emails.	|Restructures entire departmental operations, dropping process times from days to minutes.
 
