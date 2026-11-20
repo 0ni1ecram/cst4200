@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frame 17 — Payments &amp; change orders</title><style>
+:root{--ink:#1a1d21;--mut:#6b7280;--line:#c2c8d0;--bg:#f4f5f7;--pan:#fff;--dash:#9aa3ad;--acc:#2f5d8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace}
+header.top{padding:26px 32px;background:var(--pan);border-bottom:3px solid var(--ink)}
+h1{margin:0 0 6px;font-size:24px;letter-spacing:-.4px}h2{margin:34px 32px 4px;font-size:17px}
+.sub{color:var(--mut);font-size:12.5px;max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 32px 0}
+.legend span{border:1px solid var(--line);background:var(--pan);padding:3px 9px;font-size:11.5px;border-radius:12px}
+.frame{margin:26px 32px;background:var(--pan);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+page-break-inside:avoid;box-shadow:3px 3px 0 rgba(26,29,33,.09)}
+.fh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 14px;
+border-bottom:1.5px solid var(--ink);background:#eceef1}
+.fid{font-weight:700;background:var(--ink);color:#fff;padding:2px 8px;border-radius:4px;font-size:12px}
+.ft{font-weight:700;font-size:15.5px}.fp{font-size:11px;color:var(--mut);border:1px dashed var(--dash);padding:1px 7px;border-radius:9px}
+.fb{padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}
+.c21{grid-template-columns:2fr 1fr}.c12{grid-template-columns:1fr 2fr}
+.reg{border:1.4px dashed var(--dash);border-radius:5px;padding:10px;background:var(--pan);min-height:64px;position:relative}
+.rl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:-4px 0 8px;font-weight:700}
+.an{position:absolute;top:-9px;right:-9px;width:20px;height:20px;border-radius:50%;background:var(--acc);
+color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--pan)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:11px;background:#fafbfc;white-space:nowrap}
+.chip.pk{border-color:#a9791c;background:#fdf4e3;font-weight:700}
+.chip.fk{border-color:#2b7a72;background:#e8f6f4}
+.chip.fk::after{content:"\2192 "\2009 attr}
+.fld{border:1px solid var(--line);border-radius:4px;padding:5px 7px;font-size:11.5px;background:#fff}
+.flds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.fld b{display:block;font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fld i{font-style:normal;color:#9aa3ad;font-size:10px}
+table.w{width:100%;border-collapse:collapse;font-size:11px}
+table.w th{background:#eceef1;border:1px solid var(--line);padding:5px;text-align:left;font-weight:700;white-space:nowrap}
+table.w td{border:1px solid var(--line);padding:5px;color:#767e88;background:#fff}
+.bar,.ph{border:1px solid var(--dash);border-radius:3px;background:repeating-linear-gradient(45deg,#f2f3f5,#f2f3f5 6px,#e9ebee 6px,#e9ebee 12px)}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:7px;text-align:center;background:#fafbfc}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
+.note{font-size:11.5px;color:#43484f}
+.spec{border-top:1.4px dashed var(--dash);margin-top:12px;padding-top:10px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11.5px}
+.spec h4{margin:0 0 3px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.spec ul{margin:0;padding-left:16px}.spec li{margin:1px 0}
+.srcs{display:flex;flex-wrap:wrap;gap:5px}
+.src{font-size:10.5px;border:1px solid var(--ink);border-radius:3px;padding:1px 6px;background:#fff}
+.src em{font-style:normal;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.kan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kan>div{border:1px solid var(--line);border-radius:4px;padding:6px;background:#fafbfc;font-size:10.5px}
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.heat i{display:block;height:22px;border-radius:3px;border:1px solid var(--line)}
+.gantt{display:grid;gap:3px}.gantt>div{display:grid;grid-template-columns:74px 1fr;gap:6px;align-items:center;font-size:10px}
+.gantt b{font-weight:400;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .bar{height:14px}
+.tree{font-size:11px;line-height:1.75;color:var(--mut)}
+.tree u{text-decoration:none;color:var(--ink)}
+.m{color:#93a1b1;font-style:normal}
+footer{margin:30px 32px;padding-top:12px;border-top:2px solid var(--ink);font-size:11.5px;color:var(--mut)}
+code{background:#eceef1;padding:1px 4px;border-radius:3px;font-size:11px}
+.idx{margin:10px 32px;border:1px solid var(--line);background:var(--pan);border-radius:6px;overflow:auto}
+.idx td{border-top:1px solid var(--line);padding:5px 8px;font-size:11.5px;vertical-align:top}
+.idx td:first-child{width:64px;font-weight:700}
+@media (max-width:640px){
+ .frame,h2,.idx,.legend,footer{margin-left:10px;margin-right:10px}
+ header.top{padding:18px 14px}
+ .row{grid-template-columns:1fr !important;min-width:0}
+ .reg,.kpi,.kan>div{min-width:0;overflow-wrap:anywhere}
+ table.w{display:block;overflow-x:auto}
+ table.w th{white-space:normal}
+ .flds{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+ .idx{display:block;overflow-x:auto}
+ .idx td{max-width:46vw;overflow-wrap:anywhere}
+ .tree,.kan,.gantt{overflow-x:auto}
+ .kan{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:46%}
+}
+
+nav.proto-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:14px 32px;margin:0 0 12px;background:#fff;border-bottom:1px solid var(--line)}nav.proto-nav a,.nav-btn{display:inline-block;padding:8px 12px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:12px}nav.proto-nav a:hover,.nav-btn:hover{background:#eceef1}nav.proto-nav .current{background:var(--ink);color:#fff} .frame{margin-top:16px} .page-footer{margin:24px 32px;padding:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style></head><body><header class="top"><h1>Construction Lifecycle — Frame 17</h1><div class="sub">Payments &amp; change orders · P5 Construction · Static wireframe preview</div></header><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-16.html">← Previous frame</a><span class="current">Frame 17 / 25</span><a href="frame-18.html">Next frame →</a></nav><section class="frame"><div class="fh"><span class="fid">17</span><span class="ft">Payments &amp; change orders</span><span class="fp">P5 Construction</span></div><div class="fb"><div class="note">Monthly cost flow: <code>payment_application</code> per contract with the claim/certify/retention waterfall, and <code>change_order</code> approvals moving <code>approved_variation_value</code> into forecast. A payment_term table is not in this schema — the payment schedule below is derived from contract terms, shown as placeholders.</div><div class="row c21"><div class="reg"><span class="an">1</span><div class="rl">Payment waterfall — claimed vs certified vs retention</div><table class="w"><tr><th>app_id</th><th>claimed_amount</th><th>certified_amount</th><th>retention_held</th></tr><tr><td>PA-14</td><td>$6.42m</td><td>$6.05m</td><td>$0.61m</td></tr><tr><td>PA-13</td><td>$5.88m</td><td>$5.71m</td><td>$0.57m</td></tr></table><br/><div class="ph" style="height:120px"><span class="m"> claim → certify → less retention → net due, by application</span></div></div><div class="reg"><span class="an">2</span><div class="rl">Retention pot — contract</div><div class="kpis"><div class="kpi"><b>contract.retention_pct</b><span>Retention %</span></div><div class="kpi"><b>$4.2m</b><span>Held</span></div><div class="kpi"><b>partial</b><span>Release stage</span></div></div></div></div><div class="row c2"><div class="reg"><span class="an">3</span><div class="rl">Change order approval stepper — value impact to forecast</div><div class="chips"><span class="chip">1. raised</span><span class="chip">2. priced</span><span class="chip">3. PM approved</span><span class="chip pk">4. owner approved</span></div><br/><table class="w"><tr><th>change_order_id</th><th>contract_id</th><th>wbs_id</th><th>approved_variation_value</th><th>description</th></tr><tr><td>•</td><td>CO-31 ground conditions</td><td>wbs E1</td><td>+$1.9m</td><td>dewatering duration x3</td></tr></table></div><div class="reg"><span class="an">4</span><div class="rl">Derived payment grid (no payment_term table)</div><table class="w"><tr><th>milestone</th><th>due</th><th>amount</th><th>source</th></tr><tr><td>site mobilisation</td><td>signed +15d</td><td>$4.0m</td><td>contract</td></tr><tr><td>monthly cycle</td><td>cert + day 28</td><td>PA net</td><td>payment_application</td></tr><tr><td>retention tranche 1</td><td>substantial completion</td><td>50% held</td><td>frame 19 gate</td></tr></table></div></div><div class="spec"><div><h4>Data sources (tables → this frame)</h4><div class="srcs"><span class="src">payment_application<em> · 6 cols · 2 FK</em></span><span class="src">change_order<em> · 5 cols · 2 FK</em></span><span class="src">contract<em> · 8 cols · 3 FK</em></span><span class="src">wbs<em> · 5 cols · 2 FK</em></span><span class="src">contingency<em> · 6 cols · 2 FK</em></span><span class="src">stakeholder<em> · 4 cols · 0 FK</em></span></div></div><div><h4>Primary actions</h4><ul><li>compile application from EV (frame 13)</li><li>certify / query line</li><li>route CO for approval</li><li>apply contingency draw</li></ul></div><div><h4>Validation &amp; business rules</h4><ul><li>Certified amount never exceeds claimed; each delta needs a reason line.</li><li>An approved CO over threshold must either consume <code>contingency.allocated_amount</code> (with remaining_amount update) or a funding re-approval.</li><li>Insurance/bond lapse (frame 11) suspends certification; retention release is a frame 19 gate.</li></ul></div><div><h4>Roles / states</h4><ul><li>QS compiles; PM certifies below delegation; Owner signs above threshold</li><li>application in draft · certification queried · CO awaiting owner · payless notice</li></ul></div></div></div></section><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-16.html">← Previous frame</a><span class="current">Frame 17 / 25</span><a href="frame-18.html">Next frame →</a></nav><footer class="page-footer"><span>Static HTML/CSS prototype · Frame 17</span><a href="index.html">All frames</a></footer></body></html>

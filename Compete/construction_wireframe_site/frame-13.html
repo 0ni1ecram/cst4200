@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frame 13 — Daily progress &amp; earned value</title><style>
+:root{--ink:#1a1d21;--mut:#6b7280;--line:#c2c8d0;--bg:#f4f5f7;--pan:#fff;--dash:#9aa3ad;--acc:#2f5d8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace}
+header.top{padding:26px 32px;background:var(--pan);border-bottom:3px solid var(--ink)}
+h1{margin:0 0 6px;font-size:24px;letter-spacing:-.4px}h2{margin:34px 32px 4px;font-size:17px}
+.sub{color:var(--mut);font-size:12.5px;max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 32px 0}
+.legend span{border:1px solid var(--line);background:var(--pan);padding:3px 9px;font-size:11.5px;border-radius:12px}
+.frame{margin:26px 32px;background:var(--pan);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+page-break-inside:avoid;box-shadow:3px 3px 0 rgba(26,29,33,.09)}
+.fh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 14px;
+border-bottom:1.5px solid var(--ink);background:#eceef1}
+.fid{font-weight:700;background:var(--ink);color:#fff;padding:2px 8px;border-radius:4px;font-size:12px}
+.ft{font-weight:700;font-size:15.5px}.fp{font-size:11px;color:var(--mut);border:1px dashed var(--dash);padding:1px 7px;border-radius:9px}
+.fb{padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}
+.c21{grid-template-columns:2fr 1fr}.c12{grid-template-columns:1fr 2fr}
+.reg{border:1.4px dashed var(--dash);border-radius:5px;padding:10px;background:var(--pan);min-height:64px;position:relative}
+.rl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:-4px 0 8px;font-weight:700}
+.an{position:absolute;top:-9px;right:-9px;width:20px;height:20px;border-radius:50%;background:var(--acc);
+color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--pan)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:11px;background:#fafbfc;white-space:nowrap}
+.chip.pk{border-color:#a9791c;background:#fdf4e3;font-weight:700}
+.chip.fk{border-color:#2b7a72;background:#e8f6f4}
+.chip.fk::after{content:"\2192 "\2009 attr}
+.fld{border:1px solid var(--line);border-radius:4px;padding:5px 7px;font-size:11.5px;background:#fff}
+.flds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.fld b{display:block;font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fld i{font-style:normal;color:#9aa3ad;font-size:10px}
+table.w{width:100%;border-collapse:collapse;font-size:11px}
+table.w th{background:#eceef1;border:1px solid var(--line);padding:5px;text-align:left;font-weight:700;white-space:nowrap}
+table.w td{border:1px solid var(--line);padding:5px;color:#767e88;background:#fff}
+.bar,.ph{border:1px solid var(--dash);border-radius:3px;background:repeating-linear-gradient(45deg,#f2f3f5,#f2f3f5 6px,#e9ebee 6px,#e9ebee 12px)}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:7px;text-align:center;background:#fafbfc}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
+.note{font-size:11.5px;color:#43484f}
+.spec{border-top:1.4px dashed var(--dash);margin-top:12px;padding-top:10px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11.5px}
+.spec h4{margin:0 0 3px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.spec ul{margin:0;padding-left:16px}.spec li{margin:1px 0}
+.srcs{display:flex;flex-wrap:wrap;gap:5px}
+.src{font-size:10.5px;border:1px solid var(--ink);border-radius:3px;padding:1px 6px;background:#fff}
+.src em{font-style:normal;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.kan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kan>div{border:1px solid var(--line);border-radius:4px;padding:6px;background:#fafbfc;font-size:10.5px}
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.heat i{display:block;height:22px;border-radius:3px;border:1px solid var(--line)}
+.gantt{display:grid;gap:3px}.gantt>div{display:grid;grid-template-columns:74px 1fr;gap:6px;align-items:center;font-size:10px}
+.gantt b{font-weight:400;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .bar{height:14px}
+.tree{font-size:11px;line-height:1.75;color:var(--mut)}
+.tree u{text-decoration:none;color:var(--ink)}
+.m{color:#93a1b1;font-style:normal}
+footer{margin:30px 32px;padding-top:12px;border-top:2px solid var(--ink);font-size:11.5px;color:var(--mut)}
+code{background:#eceef1;padding:1px 4px;border-radius:3px;font-size:11px}
+.idx{margin:10px 32px;border:1px solid var(--line);background:var(--pan);border-radius:6px;overflow:auto}
+.idx td{border-top:1px solid var(--line);padding:5px 8px;font-size:11.5px;vertical-align:top}
+.idx td:first-child{width:64px;font-weight:700}
+@media (max-width:640px){
+ .frame,h2,.idx,.legend,footer{margin-left:10px;margin-right:10px}
+ header.top{padding:18px 14px}
+ .row{grid-template-columns:1fr !important;min-width:0}
+ .reg,.kpi,.kan>div{min-width:0;overflow-wrap:anywhere}
+ table.w{display:block;overflow-x:auto}
+ table.w th{white-space:normal}
+ .flds{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+ .idx{display:block;overflow-x:auto}
+ .idx td{max-width:46vw;overflow-wrap:anywhere}
+ .tree,.kan,.gantt{overflow-x:auto}
+ .kan{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:46%}
+}
+
+nav.proto-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:14px 32px;margin:0 0 12px;background:#fff;border-bottom:1px solid var(--line)}nav.proto-nav a,.nav-btn{display:inline-block;padding:8px 12px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:12px}nav.proto-nav a:hover,.nav-btn:hover{background:#eceef1}nav.proto-nav .current{background:var(--ink);color:#fff} .frame{margin-top:16px} .page-footer{margin:24px 32px;padding:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style></head><body><header class="top"><h1>Construction Lifecycle — Frame 13</h1><div class="sub">Daily progress &amp; earned value · P5 Construction · Static wireframe preview</div></header><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-12.html">← Previous frame</a><span class="current">Frame 13 / 25</span><a href="frame-14.html">Next frame →</a></nav><section class="frame"><div class="fh"><span class="fid">13</span><span class="ft">Daily progress &amp; earned value</span><span class="fp">P5 Construction</span></div><div class="fb"><div class="note">The site field log feeding the S-curve: one <code>daily_progress</code> row per activity per <code>log_date</code>; EV metrics (<code>earned_value_ev</code>, <code>actual_cost_ac</code>) accumulate against <code>schedule_activity</code>. A dedicated labour-breakdown table (daily_progress_labor) is not in this schema, so the split is derived via contract → stakeholder.</div><div class="row c21"><div class="reg"><span class="an">1</span><div class="rl">Field log form — daily_progress</div><div class="flds"><div class="fld"><b>progress_id · PK</b><i>□ type UUID</i></div><div class="fld"><b>activity_id · FK</b><i>schedule_activity</i></div><div class="fld"><b>boq_id · FK</b><i>boq_item</i></div><div class="fld"><b>log_date</b><i>□ type DATE</i></div><div class="fld"><b>headcount</b><i>□ type INT</i></div><div class="fld"><b>man_hours</b><i>□ type NUMERIC</i></div><div class="fld"><b>equipment_hours</b><i>□ type NUMERIC</i></div><div class="fld"><b>percent_complete</b><i>□ type NUMERIC</i></div><div class="fld"><b>earned_value_ev</b><i>□ type NUMERIC</i></div><div class="fld"><b>actual_cost_ac</b><i>□ type NUMERIC</i></div></div><br/><table class="w"><tr><th>log_date</th><th>activity_id</th><th>headcount</th><th>man_hours</th><th>equipment_hours</th><th>percent_complete</th><th>earned_value_ev</th><th>actual_cost_ac</th></tr><tr><td>2026-11-19</td><td>F30 L4 frame</td><td>38</td><td>412</td><td>96</td><td>62.0</td><td>$1.18m</td><td>$1.12m</td></tr><tr><td>2026-11-19</td><td>G1 MEP risers</td><td>11</td><td>98</td><td>6</td><td>41.0</td><td>$0.31m</td><td>$0.34m</td></tr></table></div><div class="reg"><span class="an">2</span><div class="rl">Sub contractor / trade split — derived</div><table class="w"><tr><th>trade_scope (bid_package)</th><th>organisation (stakeholder)</th><th>man_hours</th><th>share</th></tr><tr><td>Curtain wall</td><td>Aurora Facades</td><td>128</td><td>26%</td></tr><tr><td>MV switchgear</td><td>GridPower Ltd</td><td>54</td><td>11%</td></tr><tr><td> — derived, no labour table —</td><td></td><td>412</td><td>100%</td></tr></table></div></div><div class="row"><div class="reg"><span class="an">3</span><div class="rl">S-curve placeholder — cumulative earned_value_ev vs actual_cost_ac vs planned</div><div class="ph" style="height:150px"><span class="m"> EV / AC / PV curves by log_date · SPI=CPI read-out</span></div></div></div><div class="spec"><div><h4>Data sources (tables → this frame)</h4><div class="srcs"><span class="src">daily_progress<em> · 10 cols · 2 FK</em></span><span class="src">schedule_activity<em> · 11 cols · 3 FK</em></span><span class="src">boq_item<em> · 9 cols · 3 FK</em></span><span class="src">contract<em> · 8 cols · 3 FK</em></span><span class="src">bid_package<em> · 5 cols · 1 FK</em></span><span class="src">stakeholder<em> · 4 cols · 0 FK</em></span></div></div><div><h4>Primary actions</h4><ul><li>submit daily log</li><li>attach photos</li><li>recompute EV / SPI / CPI</li><li>lock history after 7 days</li></ul></div><div><h4>Validation &amp; business rules</h4><ul><li><code>percent_complete</code> cannot regress unless the prior log is amended with a reason code.</li><li>A log row without <code>activity_id</code> cannot post to EV; QC hold-point passed (frame 15) is required before % counts on gated works.</li><li><code>man_hours</code> should reconcile with headcount × shift length; beyond 2× raises a data-quality flag.</li></ul></div><div><h4>Roles / states</h4><ul><li>Site engineer / superintendent submits; PM approves; subs see own trades</li><li>offline draft · partially synced · log locked · EV recompute queued</li></ul></div></div></div></section><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-12.html">← Previous frame</a><span class="current">Frame 13 / 25</span><a href="frame-14.html">Next frame →</a></nav><footer class="page-footer"><span>Static HTML/CSS prototype · Frame 13</span><a href="index.html">All frames</a></footer></body></html>

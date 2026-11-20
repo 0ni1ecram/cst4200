@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frame 08 — Bill of quantities &amp; contingency</title><style>
+:root{--ink:#1a1d21;--mut:#6b7280;--line:#c2c8d0;--bg:#f4f5f7;--pan:#fff;--dash:#9aa3ad;--acc:#2f5d8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace}
+header.top{padding:26px 32px;background:var(--pan);border-bottom:3px solid var(--ink)}
+h1{margin:0 0 6px;font-size:24px;letter-spacing:-.4px}h2{margin:34px 32px 4px;font-size:17px}
+.sub{color:var(--mut);font-size:12.5px;max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 32px 0}
+.legend span{border:1px solid var(--line);background:var(--pan);padding:3px 9px;font-size:11.5px;border-radius:12px}
+.frame{margin:26px 32px;background:var(--pan);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+page-break-inside:avoid;box-shadow:3px 3px 0 rgba(26,29,33,.09)}
+.fh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 14px;
+border-bottom:1.5px solid var(--ink);background:#eceef1}
+.fid{font-weight:700;background:var(--ink);color:#fff;padding:2px 8px;border-radius:4px;font-size:12px}
+.ft{font-weight:700;font-size:15.5px}.fp{font-size:11px;color:var(--mut);border:1px dashed var(--dash);padding:1px 7px;border-radius:9px}
+.fb{padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}
+.c21{grid-template-columns:2fr 1fr}.c12{grid-template-columns:1fr 2fr}
+.reg{border:1.4px dashed var(--dash);border-radius:5px;padding:10px;background:var(--pan);min-height:64px;position:relative}
+.rl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:-4px 0 8px;font-weight:700}
+.an{position:absolute;top:-9px;right:-9px;width:20px;height:20px;border-radius:50%;background:var(--acc);
+color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--pan)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:11px;background:#fafbfc;white-space:nowrap}
+.chip.pk{border-color:#a9791c;background:#fdf4e3;font-weight:700}
+.chip.fk{border-color:#2b7a72;background:#e8f6f4}
+.chip.fk::after{content:"\2192 "\2009 attr}
+.fld{border:1px solid var(--line);border-radius:4px;padding:5px 7px;font-size:11.5px;background:#fff}
+.flds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.fld b{display:block;font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fld i{font-style:normal;color:#9aa3ad;font-size:10px}
+table.w{width:100%;border-collapse:collapse;font-size:11px}
+table.w th{background:#eceef1;border:1px solid var(--line);padding:5px;text-align:left;font-weight:700;white-space:nowrap}
+table.w td{border:1px solid var(--line);padding:5px;color:#767e88;background:#fff}
+.bar,.ph{border:1px solid var(--dash);border-radius:3px;background:repeating-linear-gradient(45deg,#f2f3f5,#f2f3f5 6px,#e9ebee 6px,#e9ebee 12px)}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:7px;text-align:center;background:#fafbfc}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
+.note{font-size:11.5px;color:#43484f}
+.spec{border-top:1.4px dashed var(--dash);margin-top:12px;padding-top:10px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11.5px}
+.spec h4{margin:0 0 3px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.spec ul{margin:0;padding-left:16px}.spec li{margin:1px 0}
+.srcs{display:flex;flex-wrap:wrap;gap:5px}
+.src{font-size:10.5px;border:1px solid var(--ink);border-radius:3px;padding:1px 6px;background:#fff}
+.src em{font-style:normal;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.kan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kan>div{border:1px solid var(--line);border-radius:4px;padding:6px;background:#fafbfc;font-size:10.5px}
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.heat i{display:block;height:22px;border-radius:3px;border:1px solid var(--line)}
+.gantt{display:grid;gap:3px}.gantt>div{display:grid;grid-template-columns:74px 1fr;gap:6px;align-items:center;font-size:10px}
+.gantt b{font-weight:400;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .bar{height:14px}
+.tree{font-size:11px;line-height:1.75;color:var(--mut)}
+.tree u{text-decoration:none;color:var(--ink)}
+.m{color:#93a1b1;font-style:normal}
+footer{margin:30px 32px;padding-top:12px;border-top:2px solid var(--ink);font-size:11.5px;color:var(--mut)}
+code{background:#eceef1;padding:1px 4px;border-radius:3px;font-size:11px}
+.idx{margin:10px 32px;border:1px solid var(--line);background:var(--pan);border-radius:6px;overflow:auto}
+.idx td{border-top:1px solid var(--line);padding:5px 8px;font-size:11.5px;vertical-align:top}
+.idx td:first-child{width:64px;font-weight:700}
+@media (max-width:640px){
+ .frame,h2,.idx,.legend,footer{margin-left:10px;margin-right:10px}
+ header.top{padding:18px 14px}
+ .row{grid-template-columns:1fr !important;min-width:0}
+ .reg,.kpi,.kan>div{min-width:0;overflow-wrap:anywhere}
+ table.w{display:block;overflow-x:auto}
+ table.w th{white-space:normal}
+ .flds{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+ .idx{display:block;overflow-x:auto}
+ .idx td{max-width:46vw;overflow-wrap:anywhere}
+ .tree,.kan,.gantt{overflow-x:auto}
+ .kan{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:46%}
+}
+
+nav.proto-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:14px 32px;margin:0 0 12px;background:#fff;border-bottom:1px solid var(--line)}nav.proto-nav a,.nav-btn{display:inline-block;padding:8px 12px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:12px}nav.proto-nav a:hover,.nav-btn:hover{background:#eceef1}nav.proto-nav .current{background:var(--ink);color:#fff} .frame{margin-top:16px} .page-footer{margin:24px 32px;padding:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style></head><body><header class="top"><h1>Construction Lifecycle — Frame 08</h1><div class="sub">Bill of quantities &amp; contingency · P34 Procurement &amp; Planning · Static wireframe preview</div></header><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-07.html">← Previous frame</a><span class="current">Frame 08 / 25</span><a href="frame-09.html">Next frame →</a></nav><section class="frame"><div class="fh"><span class="fid">08</span><span class="ft">Bill of quantities &amp; contingency</span><span class="fp">P34 Procurement &amp; Planning</span></div><div class="fb"><div class="note">Rate build-up across <code>boq_item</code> (9 cols). Qty × (material + labour) is the spine every later cost figure rolls up to WBS.</div><div class="row c21"><div class="reg"><span class="an">1</span><div class="rl">BOQ grid</div><table class="w"><tr><th>boq_id</th><th>project_id</th><th>wbs_id</th><th>element_id</th><th>unit_of_measure</th><th>estimated_qty</th><th>unit_material_rate</th><th>unit_labor_rate</th><th>productivity_norm</th></tr><tr><td>•</td><td>C30/37 concrete</td><td>m³</td><td>1,240</td><td>m</td><td>88.00</td><td>24.50</td><td>0.55</td><td>E20</td><td>EL-214</td></tr></table></div><div class="reg"><div class="rl">Rate editor</div><div class="flds"><div class="fld"><b>boq_id · PK</b><i>□ type UUID</i></div><div class="fld"><b>project_id · FK</b><i>project</i></div><div class="fld"><b>wbs_id · FK</b><i>wbs</i></div><div class="fld"><b>element_id · FK</b><i>bim_element</i></div><div class="fld"><b>unit_of_measure</b><i>□ type VARCHAR</i></div><div class="fld"><b>estimated_qty</b><i>□ type NUMERIC</i></div><div class="fld"><b>unit_material_rate</b><i>□ type NUMERIC</i></div><div class="fld"><b>unit_labor_rate</b><i>□ type NUMERIC</i></div><div class="fld"><b>productivity_norm</b><i>□ type NUMERIC</i></div></div></div></div><div class="row c2"><div class="reg"><div class="rl">Contingency drawdown — design / construction / VE reserve</div><table class="w"><tr><th>contingency_id</th><th>project_id</th><th>wbs_id</th><th>type</th><th>allocated_amount</th><th>remaining_amount</th></tr><tr><td>•</td><td>design</td><td>$2.1m</td><td>$0.6m</td><td>$1.5m</td></tr></table><br/><div class="chips"><span class="chip pk" title="UUID">contingency_id</span><span class="chip fk" title="UUID">project_id→project</span><span class="chip fk" title="UUID">wbs_id→wbs</span><span class="chip" title="ENUM">type</span><span class="chip" title="NUMERIC">allocated_amount</span><span class="chip" title="NUMERIC">remaining_amount</span></div></div><div class="reg"><span class="an">2</span><div class="rl">Derived (read-only)</div><div class="kpis"><div class="kpi"><b>$311.4m</b><span>Base cost</span></div><div class="kpi"><b>$14.2m</b><span>Risk</span></div><div class="kpi"><b>$6.9m</b><span>Conting. used</span></div><div class="kpi"><b>$409.0m</b><span>Forecast</span></div></div></div></div><div class="spec"><div><h4>Data sources (tables → this frame)</h4><div class="srcs"><span class="src">boq_item<em> · 9 cols · 3 FK</em></span><span class="src">contingency<em> · 6 cols · 2 FK</em></span><span class="src">wbs<em> · 5 cols · 2 FK</em></span><span class="src">change_order<em> · 5 cols · 2 FK</em></span></div></div><div><h4>Primary actions</h4><ul><li>add line</li><li>apply rate set</li><li>bind line to wbs &amp; element</li><li>re-roll up to WBS</li></ul></div><div><h4>Validation &amp; business rules</h4><ul><li><code>productivity_norm</code> drives labour hours; without it the schedule (frame 09) cannot compute duration.</li><li>Cost rolls up via <code>boq_item.wbs_id</code> and <code>boq_item.element_id</code>, never onto the rate · one WBS node may carry many lines.</li><li>Contingency transfer into base cost must reference the change_order that consumed it.</li></ul></div><div><h4>Roles / states</h4><ul><li>Quantity surveyor writes; GC reviews awarded rates</li><li>rate missing · circular unit conversion · unsaved diff</li></ul></div></div></div></section><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-07.html">← Previous frame</a><span class="current">Frame 08 / 25</span><a href="frame-09.html">Next frame →</a></nav><footer class="page-footer"><span>Static HTML/CSS prototype · Frame 08</span><a href="index.html">All frames</a></footer></body></html>

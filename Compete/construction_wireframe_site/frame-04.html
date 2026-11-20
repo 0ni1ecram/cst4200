@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frame 04 — Core spine — WBS, spatial zones, site</title><style>
+:root{--ink:#1a1d21;--mut:#6b7280;--line:#c2c8d0;--bg:#f4f5f7;--pan:#fff;--dash:#9aa3ad;--acc:#2f5d8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace}
+header.top{padding:26px 32px;background:var(--pan);border-bottom:3px solid var(--ink)}
+h1{margin:0 0 6px;font-size:24px;letter-spacing:-.4px}h2{margin:34px 32px 4px;font-size:17px}
+.sub{color:var(--mut);font-size:12.5px;max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 32px 0}
+.legend span{border:1px solid var(--line);background:var(--pan);padding:3px 9px;font-size:11.5px;border-radius:12px}
+.frame{margin:26px 32px;background:var(--pan);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+page-break-inside:avoid;box-shadow:3px 3px 0 rgba(26,29,33,.09)}
+.fh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 14px;
+border-bottom:1.5px solid var(--ink);background:#eceef1}
+.fid{font-weight:700;background:var(--ink);color:#fff;padding:2px 8px;border-radius:4px;font-size:12px}
+.ft{font-weight:700;font-size:15.5px}.fp{font-size:11px;color:var(--mut);border:1px dashed var(--dash);padding:1px 7px;border-radius:9px}
+.fb{padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}
+.c21{grid-template-columns:2fr 1fr}.c12{grid-template-columns:1fr 2fr}
+.reg{border:1.4px dashed var(--dash);border-radius:5px;padding:10px;background:var(--pan);min-height:64px;position:relative}
+.rl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:-4px 0 8px;font-weight:700}
+.an{position:absolute;top:-9px;right:-9px;width:20px;height:20px;border-radius:50%;background:var(--acc);
+color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--pan)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:11px;background:#fafbfc;white-space:nowrap}
+.chip.pk{border-color:#a9791c;background:#fdf4e3;font-weight:700}
+.chip.fk{border-color:#2b7a72;background:#e8f6f4}
+.chip.fk::after{content:"\2192 "\2009 attr}
+.fld{border:1px solid var(--line);border-radius:4px;padding:5px 7px;font-size:11.5px;background:#fff}
+.flds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.fld b{display:block;font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fld i{font-style:normal;color:#9aa3ad;font-size:10px}
+table.w{width:100%;border-collapse:collapse;font-size:11px}
+table.w th{background:#eceef1;border:1px solid var(--line);padding:5px;text-align:left;font-weight:700;white-space:nowrap}
+table.w td{border:1px solid var(--line);padding:5px;color:#767e88;background:#fff}
+.bar,.ph{border:1px solid var(--dash);border-radius:3px;background:repeating-linear-gradient(45deg,#f2f3f5,#f2f3f5 6px,#e9ebee 6px,#e9ebee 12px)}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:7px;text-align:center;background:#fafbfc}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
+.note{font-size:11.5px;color:#43484f}
+.spec{border-top:1.4px dashed var(--dash);margin-top:12px;padding-top:10px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11.5px}
+.spec h4{margin:0 0 3px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.spec ul{margin:0;padding-left:16px}.spec li{margin:1px 0}
+.srcs{display:flex;flex-wrap:wrap;gap:5px}
+.src{font-size:10.5px;border:1px solid var(--ink);border-radius:3px;padding:1px 6px;background:#fff}
+.src em{font-style:normal;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.kan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kan>div{border:1px solid var(--line);border-radius:4px;padding:6px;background:#fafbfc;font-size:10.5px}
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.heat i{display:block;height:22px;border-radius:3px;border:1px solid var(--line)}
+.gantt{display:grid;gap:3px}.gantt>div{display:grid;grid-template-columns:74px 1fr;gap:6px;align-items:center;font-size:10px}
+.gantt b{font-weight:400;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .bar{height:14px}
+.tree{font-size:11px;line-height:1.75;color:var(--mut)}
+.tree u{text-decoration:none;color:var(--ink)}
+.m{color:#93a1b1;font-style:normal}
+footer{margin:30px 32px;padding-top:12px;border-top:2px solid var(--ink);font-size:11.5px;color:var(--mut)}
+code{background:#eceef1;padding:1px 4px;border-radius:3px;font-size:11px}
+.idx{margin:10px 32px;border:1px solid var(--line);background:var(--pan);border-radius:6px;overflow:auto}
+.idx td{border-top:1px solid var(--line);padding:5px 8px;font-size:11.5px;vertical-align:top}
+.idx td:first-child{width:64px;font-weight:700}
+@media (max-width:640px){
+ .frame,h2,.idx,.legend,footer{margin-left:10px;margin-right:10px}
+ header.top{padding:18px 14px}
+ .row{grid-template-columns:1fr !important;min-width:0}
+ .reg,.kpi,.kan>div{min-width:0;overflow-wrap:anywhere}
+ table.w{display:block;overflow-x:auto}
+ table.w th{white-space:normal}
+ .flds{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+ .idx{display:block;overflow-x:auto}
+ .idx td{max-width:46vw;overflow-wrap:anywhere}
+ .tree,.kan,.gantt{overflow-x:auto}
+ .kan{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:46%}
+}
+
+nav.proto-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:14px 32px;margin:0 0 12px;background:#fff;border-bottom:1px solid var(--line)}nav.proto-nav a,.nav-btn{display:inline-block;padding:8px 12px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:12px}nav.proto-nav a:hover,.nav-btn:hover{background:#eceef1}nav.proto-nav .current{background:var(--ink);color:#fff} .frame{margin-top:16px} .page-footer{margin:24px 32px;padding:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style></head><body><header class="top"><h1>Construction Lifecycle — Frame 04</h1><div class="sub">Core spine — WBS, spatial zones, site · Core spine · Static wireframe preview</div></header><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-03.html">← Previous frame</a><span class="current">Frame 04 / 25</span><a href="frame-05.html">Next frame →</a></nav><section class="frame"><div class="fh"><span class="fid">04</span><span class="ft">Core spine — WBS, spatial zones, site</span><span class="fp">Core spine</span></div><div class="fb"><div class="note">Browses the three spines the cost, location and scope data hang off. <code>wbs</code> is self-referencing (<code>parent_wbs_id → wbs</code>) so it renders as a tree, not a grid.</div><div class="row c21"><div class="reg"><span class="an">1</span><div class="rl">WBS tree (self-FK parent_wbs_id)</div><div class="tree"><u>E</u> Substructure <span class="m">wbs_code</span><br/> └<u>E1</u> Foundations<br/>  └<u>E10</u> Piling<br/> └<u>E2</u> Basal slab<br/><u>F</u> Superstructure…</div><br/><div class="chips"><span class="chip pk" title="UUID">wbs_id</span><span class="chip fk" title="UUID">project_id→project</span><span class="chip fk" title="UUID">parent_wbs_id→wbs</span><span class="chip" title="VARCHAR">wbs_code</span><span class="chip" title="TEXT">description</span></div></div><div class="reg"><div class="rl">Selected node — editable fields</div><div class="flds"><div class="fld"><b>wbs_id · PK</b><i>□ type UUID</i></div><div class="fld"><b>project_id · FK</b><i>project</i></div><div class="fld"><b>parent_wbs_id · FK</b><i>wbs</i></div><div class="fld"><b>wbs_code</b><i>□ type VARCHAR</i></div><div class="fld"><b>description</b><i>□ type TEXT</i></div></div></div></div><div class="row c2"><div class="reg"><span class="an">2</span><div class="rl">Spatial zones &amp; rooms — location spine</div><table class="w"><tr><th>room_id</th><th>project_id</th><th>level_floor</th><th>room_number</th><th>net_area</th><th>gross_area</th><th>occupancy_load</th><th>acoustic_rating</th><th>fire_rating</th></tr><tr><td>•</td><td>Z1</td><td>Level 3</td><td>R3-118</td><td>Office</td><td>42.6</td><td>BREEAM Very Good</td><td></td></tr></table><br/><div class="chips"><span class="chip pk" title="UUID">room_id</span><span class="chip fk" title="UUID">project_id→project</span><span class="chip" title="INT">level_floor</span><span class="chip" title="VARCHAR">room_number</span><span class="chip" title="NUMERIC">net_area</span><span class="chip" title="NUMERIC">gross_area</span><span class="chip" title="INT">occupancy_load</span><span class="chip" title="VARCHAR">acoustic_rating</span><span class="chip" title="VARCHAR">fire_rating</span></div></div><div class="reg"><span class="an">3</span><div class="rl">Site &amp; environmental status</div><div class="flds"><div class="fld"><b>site_id · PK</b><i>□ type UUID</i></div><div class="fld"><b>project_id · FK</b><i>project</i></div><div class="fld"><b>parcel_id</b><i>□ type VARCHAR</i></div><div class="fld"><b>coordinates</b><i>□ type GEOGRAPHY</i></div><div class="fld"><b>far</b><i>□ type NUMERIC</i></div><div class="fld"><b>zoning_code</b><i>□ type VARCHAR</i></div><div class="fld"><b>soil_bearing_capacity</b><i>□ type NUMERIC</i></div><div class="fld"><b>water_table_depth</b><i>□ type NUMERIC</i></div><div class="fld"><b>eia_status</b><i>□ type ENUM</i></div></div></div></div><div class="spec"><div><h4>Data sources (tables → this frame)</h4><div class="srcs"><span class="src">wbs<em> · 5 cols · 2 FK</em></span><span class="src">spatial_zone_room<em> · 9 cols · 1 FK</em></span><span class="src">site<em> · 9 cols · 1 FK</em></span></div></div><div><h4>Primary actions</h4><ul><li>re-parent WBS node (cycles rejected)</li><li>bulk import Uniclass 2015 codes</li><li>set room rating</li></ul></div><div><h4>Validation &amp; business rules</h4><ul><li>Re-parenting must be rejected if it creates a cycle through <code>parent_wbs_id</code>.</li><li><code>far</code> vs planning envelope validated against <code>zoning_code</code>.</li><li><code>eia_status</code> gates the carbon_project baseline dates (frame 22).</li></ul></div><div><h4>Roles / states</h4><ul><li>Architect edits WBS; GC read-only; environmental consultant edits eia_status</li><li>tree &gt; 500 nodes (virtualise) · orphan node · unsaved-changes guard</li></ul></div></div></div></section><nav class="proto-nav"><a href="index.html">← Frame index</a><a href="frame-03.html">← Previous frame</a><span class="current">Frame 04 / 25</span><a href="frame-05.html">Next frame →</a></nav><footer class="page-footer"><span>Static HTML/CSS prototype · Frame 04</span><a href="index.html">All frames</a></footer></body></html>

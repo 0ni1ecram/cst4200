@@ -1,0 +1,13 @@
+
+/* print.css - the demo is meant to be printed as a frame pack */
+@page{size:A4 landscape;margin:12mm}
+body{background:#fff}
+.topbar,.rail,.prevnext,.srcs-strip,.filters,.pager{display:none !important}
+.wrap,.hubwrap{display:block;padding:0;max-width:none}
+.reg{break-inside:avoid;page-break-inside:avoid;border:1px solid #ccd2da}
+.rg-2,.rg-3,.rg-21,.rg-12,.mainsplit{display:block}
+.side{position:static}
+h1{font-size:17pt}
+a{color:#000}
+.tw{overflow:visible}
+table.grid{min-width:0;font-size:9pt}

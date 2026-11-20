@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wireframes — Construction Lifecycle, SDG &amp; Carbon Credit Edition</title><style>
+:root{--ink:#1a1d21;--mut:#6b7280;--line:#c2c8d0;--bg:#f4f5f7;--pan:#fff;--dash:#9aa3ad;--acc:#2f5d8a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font:14px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace}
+header.top{padding:26px 32px;background:var(--pan);border-bottom:3px solid var(--ink)}
+h1{margin:0 0 6px;font-size:24px;letter-spacing:-.4px}h2{margin:34px 32px 4px;font-size:17px}
+.sub{color:var(--mut);font-size:12.5px;max-width:74ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 32px 0}
+.legend span{border:1px solid var(--line);background:var(--pan);padding:3px 9px;font-size:11.5px;border-radius:12px}
+.frame{margin:26px 32px;background:var(--pan);border:1.5px solid var(--ink);border-radius:6px;overflow:hidden;
+page-break-inside:avoid;box-shadow:3px 3px 0 rgba(26,29,33,.09)}
+.fh{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 14px;
+border-bottom:1.5px solid var(--ink);background:#eceef1}
+.fid{font-weight:700;background:var(--ink);color:#fff;padding:2px 8px;border-radius:4px;font-size:12px}
+.ft{font-weight:700;font-size:15.5px}.fp{font-size:11px;color:var(--mut);border:1px dashed var(--dash);padding:1px 7px;border-radius:9px}
+.fb{padding:14px;display:grid;gap:12px}
+.row{display:grid;gap:12px}.c2{grid-template-columns:1fr 1fr}.c3{grid-template-columns:1fr 1fr 1fr}
+.c21{grid-template-columns:2fr 1fr}.c12{grid-template-columns:1fr 2fr}
+.reg{border:1.4px dashed var(--dash);border-radius:5px;padding:10px;background:var(--pan);min-height:64px;position:relative}
+.rl{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin:-4px 0 8px;font-weight:700}
+.an{position:absolute;top:-9px;right:-9px;width:20px;height:20px;border-radius:50%;background:var(--acc);
+color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--pan)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:11px;background:#fafbfc;white-space:nowrap}
+.chip.pk{border-color:#a9791c;background:#fdf4e3;font-weight:700}
+.chip.fk{border-color:#2b7a72;background:#e8f6f4}
+.chip.fk::after{content:"\2192 "\2009 attr}
+.fld{border:1px solid var(--line);border-radius:4px;padding:5px 7px;font-size:11.5px;background:#fff}
+.flds{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px}
+.fld b{display:block;font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.fld i{font-style:normal;color:#9aa3ad;font-size:10px}
+table.w{width:100%;border-collapse:collapse;font-size:11px}
+table.w th{background:#eceef1;border:1px solid var(--line);padding:5px;text-align:left;font-weight:700;white-space:nowrap}
+table.w td{border:1px solid var(--line);padding:5px;color:#767e88;background:#fff}
+.bar,.ph{border:1px solid var(--dash);border-radius:3px;background:repeating-linear-gradient(45deg,#f2f3f5,#f2f3f5 6px,#e9ebee 6px,#e9ebee 12px)}
+.kpi{border:1px solid var(--line);border-radius:4px;padding:7px;text-align:center;background:#fafbfc}
+.kpi b{display:block;font-size:15px}.kpi span{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px}
+.note{font-size:11.5px;color:#43484f}
+.spec{border-top:1.4px dashed var(--dash);margin-top:12px;padding-top:10px;display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:11.5px}
+.spec h4{margin:0 0 3px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+.spec ul{margin:0;padding-left:16px}.spec li{margin:1px 0}
+.srcs{display:flex;flex-wrap:wrap;gap:5px}
+.src{font-size:10.5px;border:1px solid var(--ink);border-radius:3px;padding:1px 6px;background:#fff}
+.src em{font-style:normal;color:var(--mut)}
+.cols{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:6px}
+.kan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.kan>div{border:1px solid var(--line);border-radius:4px;padding:6px;background:#fafbfc;font-size:10.5px}
+.heat{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.heat i{display:block;height:22px;border-radius:3px;border:1px solid var(--line)}
+.gantt{display:grid;gap:3px}.gantt>div{display:grid;grid-template-columns:74px 1fr;gap:6px;align-items:center;font-size:10px}
+.gantt b{font-weight:400;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gantt .bar{height:14px}
+.tree{font-size:11px;line-height:1.75;color:var(--mut)}
+.tree u{text-decoration:none;color:var(--ink)}
+.m{color:#93a1b1;font-style:normal}
+footer{margin:30px 32px;padding-top:12px;border-top:2px solid var(--ink);font-size:11.5px;color:var(--mut)}
+code{background:#eceef1;padding:1px 4px;border-radius:3px;font-size:11px}
+.idx{margin:10px 32px;border:1px solid var(--line);background:var(--pan);border-radius:6px;overflow:auto}
+.idx td{border-top:1px solid var(--line);padding:5px 8px;font-size:11.5px;vertical-align:top}
+.idx td:first-child{width:64px;font-weight:700}
+@media (max-width:640px){
+ .frame,h2,.idx,.legend,footer{margin-left:10px;margin-right:10px}
+ header.top{padding:18px 14px}
+ .row{grid-template-columns:1fr !important;min-width:0}
+ .reg,.kpi,.kan>div{min-width:0;overflow-wrap:anywhere}
+ table.w{display:block;overflow-x:auto}
+ table.w th{white-space:normal}
+ .flds{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+ .idx{display:block;overflow-x:auto}
+ .idx td{max-width:46vw;overflow-wrap:anywhere}
+ .tree,.kan,.gantt{overflow-x:auto}
+ .kan{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:46%}
+}
+
+nav.proto-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:14px 32px;margin:0 0 12px;background:#fff;border-bottom:1px solid var(--line)}nav.proto-nav a,.nav-btn{display:inline-block;padding:8px 12px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;font-weight:700;font-size:12px}nav.proto-nav a:hover,.nav-btn:hover{background:#eceef1}nav.proto-nav .current{background:var(--ink);color:#fff} .frame{margin-top:16px} .page-footer{margin:24px 32px;padding:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style></head><body>
+<header class="top"><h1>Construction Lifecycle — Wireframe Prototype</h1><div class="sub">Static HTML/CSS prototype. Buttons and links navigate between related wireframe pages. No backend, database, or real application behavior is included.</div></header>
+<h2>Frame index</h2><div class="legend"><span>Core spine</span><span>D12 Design &amp; Funding</span><span>P34 Procurement &amp; Planning</span><span>P5 Construction</span><span>P67 Handover &amp; Operations</span><span>SDG layer</span><span>Carbon credit layer</span></div>
+<table class="idx"><tr><td>Frame</td><td>Page</td><td>Phase</td><td>Open</td></tr>
+<tr><td>01</td><td>Application shell &amp; global navigation</td><td>Core spine</td><td><a class="nav-btn" href="frame-01.html">Open frame</a></td></tr><tr><td>02</td><td>Portfolio — project register</td><td>Core spine</td><td><a class="nav-btn" href="frame-02.html">Open frame</a></td></tr><tr><td>03</td><td>Project workspace hub</td><td>Core spine</td><td><a class="nav-btn" href="frame-03.html">Open frame</a></td></tr><tr><td>04</td><td>Core spine — WBS, spatial zones, site</td><td>Core spine</td><td><a class="nav-btn" href="frame-04.html">Open frame</a></td></tr><tr><td>05</td><td>Stakeholder register &amp; access matrix</td><td>Core spine</td><td><a class="nav-btn" href="frame-05.html">Open frame</a></td></tr><tr><td>06</td><td>Design economics &amp; funding sources</td><td>D12 Design &amp; Funding</td><td><a class="nav-btn" href="frame-06.html">Open frame</a></td></tr><tr><td>07</td><td>BIM / IFC element inspector &amp; design control</td><td>D12 Design &amp; Funding</td><td><a class="nav-btn" href="frame-07.html">Open frame</a></td></tr><tr><td>08</td><td>Bill of quantities &amp; contingency</td><td>P34 Procurement &amp; Planning</td><td><a class="nav-btn" href="frame-08.html">Open frame</a></td></tr><tr><td>09</td><td>Schedule, dependencies &amp; critical path</td><td>P34 Procurement &amp; Planning</td><td><a class="nav-btn" href="frame-09.html">Open frame</a></td></tr><tr><td>10</td><td>Permits, approvals &amp; risk register</td><td>P34 Procurement &amp; Planning</td><td><a class="nav-btn" href="frame-10.html">Open frame</a></td></tr><tr><td>11</td><td>Procurement — bid packages &amp; award</td><td>P34 Procurement &amp; Planning</td><td><a class="nav-btn" href="frame-11.html">Open frame</a></td></tr><tr><td>12</td><td>Supply chain — purchase orders &amp; track / trace</td><td>P34 Procurement &amp; Planning</td><td><a class="nav-btn" href="frame-12.html">Open frame</a></td></tr><tr><td>13</td><td>Daily progress &amp; earned value</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-13.html">Open frame</a></td></tr><tr><td>14</td><td>RFI &amp; submittal workflow</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-14.html">Open frame</a></td></tr><tr><td>15</td><td>Quality tests &amp; NCR lifecycle</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-15.html">Open frame</a></td></tr><tr><td>16</td><td>HSE, environment &amp; weather</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-16.html">Open frame</a></td></tr><tr><td>17</td><td>Payments &amp; change orders</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-17.html">Open frame</a></td></tr><tr><td>18</td><td>Handover — assets, commissioning, punch &amp; statutory</td><td>P67 Handover &amp; Operations</td><td><a class="nav-btn" href="frame-18.html">Open frame</a></td></tr><tr><td>19</td><td>Defects liability &amp; retention release gate</td><td>P67 Handover &amp; Operations</td><td><a class="nav-btn" href="frame-19.html">Open frame</a></td></tr><tr><td>20</td><td>Facility telemetry / digital twin</td><td>P67 Handover &amp; Operations</td><td><a class="nav-btn" href="frame-20.html">Open frame</a></td></tr><tr><td>21</td><td>SDG module — goal matrix, targets &amp; evidence</td><td>SDG layer</td><td><a class="nav-btn" href="frame-21.html">Open frame</a></td></tr><tr><td>22</td><td>Carbon credit module — project, issuance, ledger &amp; SDG bridge</td><td>Carbon credit layer</td><td><a class="nav-btn" href="frame-22.html">Open frame</a></td></tr><tr><td>23</td><td>Entity / record inspector (mirrors the source ERD Inspector)</td><td>Core spine</td><td><a class="nav-btn" href="frame-23.html">Open frame</a></td></tr><tr><td>24</td><td>Mobile field capture — offline-first</td><td>P5 Construction</td><td><a class="nav-btn" href="frame-24.html">Open frame</a></td></tr><tr><td>25</td><td>Cross-cutting state gallery</td><td>Core spine</td><td><a class="nav-btn" href="frame-25.html">Open frame</a></td></tr></table><footer>25 static layout frames · Use the links to move through the wireframe flow.</footer></body></html>
