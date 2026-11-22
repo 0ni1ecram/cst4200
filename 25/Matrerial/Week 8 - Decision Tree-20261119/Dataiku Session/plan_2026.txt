@@ -1,0 +1,8 @@
+Decision Tree 
+
+On Instagram data set
+
+Use credit card data: data exploration , training model, model evaluation, explaining 
+ 
+
+Unknown dataset- Just go to parent recipe --use actions then copy and apply the steps in unknown dataset

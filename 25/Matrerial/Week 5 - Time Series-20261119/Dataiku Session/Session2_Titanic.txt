@@ -1,0 +1,55 @@
+[1] Regular Import
+
+[2] Pivots and charts
+
+Survival percentage along per Age groups
+
+What age group had more chance of survival ?
+
+Survival percentage along per Passenger Class groups
+
+Which class had better chance of survival ?
+
+Survival percentage along per Gender Class groups
+
+Which Gender had a better chance of survival  ?
+
+
+Does having siblings on board increase the chance of survival ? Or not ?
+
+Does having a Parents or Children on board increase the chance of survival ? Or not ?
+
+
+Draw Bar Charts of number of passengers in each Passenger Class along with their survival split
+
+Which class visually shows higher proportional chance of survival within its cohort ?
+  
+
+[3] Click Recipe - Click prepare data to treat missing values
+
+
+Outlier, clip outliers with 1.5 IQR or 5 IQR
+replace age missing with median
+
+and embark missing with Mode
+
+Clean up the other fields
+Fare, Cabin, ticket, 
+
+
+Extract Salute / title from Name : Mr, Miss, Mrs, Master, 
+
+What is the age range of Miss ? Master ?
+
+What other titles exists in the data base ?
+  
+
+[4] Do split recipe for ID sorted then 1st 80 % remaining 20%
+
+as this option is not available in visual ML
+
+Check Titanic- Dataiku file
+
+
+Split the data set based on PClass 
+ 
