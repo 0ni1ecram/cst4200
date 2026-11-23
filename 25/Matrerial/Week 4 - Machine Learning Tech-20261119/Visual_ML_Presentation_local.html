@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Visual Introduction to Machine Learning — Presentation</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff}
+#frame{position:fixed;inset:0;width:100%;height:100%;border:0;background:#fff}
+#bar{
+  position:fixed;right:14px;top:12px;z-index:999999;
+  display:flex;gap:8px;opacity:.08;transition:opacity .2s ease;
+}
+#bar:hover{opacity:1}
+button,a{
+  border:1px solid rgba(0,0,0,.16);background:rgba(255,255,255,.94);
+  color:#333;border-radius:8px;padding:8px 11px;font:13px Arial,sans-serif;
+  text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer
+}
+#msg{
+  display:none;position:fixed;inset:0;z-index:999998;background:white;
+  font:16px/1.5 Arial,sans-serif;color:#333;padding:10vh 12vw
+}
+#msg h1{font-size:30px}
+</style>
+</head>
+<body>
+<iframe
+  id="frame"
+  src="https://narrative-flow.github.io/exploratory-study-2/"
+  allow="fullscreen"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+<div id="bar">
+  <button onclick="goFull()">Full screen</button>
+  <button onclick="reloadFrame()">Reload</button>
+  <a href="https://narrative-flow.github.io/exploratory-study-2/" target="_blank">Open direct</a>
+</div>
+
+<div id="msg">
+  <h1>Presentation could not load inside the local launcher.</h1>
+  <p>This presentation uses the exact hosted Narrative Flow/R2D3 page, so an internet connection is required.</p>
+  <p><a href="https://narrative-flow.github.io/exploratory-study-2/" target="_blank">Open the presentation directly</a></p>
+</div>
+
+<script>
+function goFull(){
+  const el=document.documentElement;
+  if(el.requestFullscreen) el.requestFullscreen();
+  else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+}
+function reloadFrame(){
+  const f=document.getElementById('frame');
+  f.src=f.src;
+}
+window.addEventListener('keydown',e=>{
+  if(e.key==='f'||e.key==='F') goFull();
+  if(e.key==='r'||e.key==='R') reloadFrame();
+});
+setTimeout(()=>{
+  // If the iframe is blocked, users can still use the direct-open button.
+  document.getElementById('bar').style.opacity='.08';
+},1500);
+</script>
+</body>
+</html>

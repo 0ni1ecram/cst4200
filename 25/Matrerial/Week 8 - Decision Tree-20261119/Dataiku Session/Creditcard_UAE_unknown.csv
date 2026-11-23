@@ -1,0 +1,101 @@
+Customer_ID,Age,Income,Marital_Status,Job_Type,Has_Loan,Credit_Score,Visits_to_Branch,Avg_Online_Spending_AED,Emirate,Children,Shopping_Interest,Total_Years_in_UAE
+NEW00001,49.0,20000.0,Single,Engineer,No,755,3,1352.88,Dubai,1,"shops at Noon and Amazon, pays Etisalat and DEWA bills",3
+NEW00002,29.0,37163.84,Single,Engineer,Yes,808,2,1334.67,Dubai,1,"buys electronics from Amazon, shops at Mall of the Emirates",8
+NEW00003,35.0,38756.89,Divorced,Manager,Yes,750,4,600.58,Dubai,0,"frequent cinema-goer, shopping at Carrefour and Centrepoint",1
+NEW00004,24.0,76628.15,Married,Manager,No,708,1,1016.81,Sharjah,0,"buys electronics from Amazon, shops at Mall of the Emirates",10
+NEW00005,41.0,76965.43,Divorced,Manager,Yes,662,8,937.13,Dubai,1,"frequent traveler, books via Booking.com and Cleartrip",12
+NEW00006,29.0,67479.0,Married,Healthcare,No,632,2,1418.59,Sharjah,1,"orders from Talabat, uses Netflix, pays Etisalat",8
+NEW00007,65.0,77685.33,Married,Manager,No,719,0,445.21,Dubai,0,"orders from Talabat, uses Netflix, pays Etisalat",7
+NEW00008,27.0,79840.27,Single,Sales,No,689,2,1120.43,Dubai,1,"minimal shopping, pays Zomato Gold and Du bills",2
+NEW00009,31.0,87782.32,Single,Sales,Yes,689,1,1556.73,Abu Dhabi,0,"minimal shopping, pays Zomato Gold and Du bills",3
+NEW00010,58.0,46617.42,Married,Healthcare,No,664,4,1087.54,Dubai,1,"active on Amazon and Noon, pays credit card bills online",20
+NEW00011,22.0,69252.91,Married,Healthcare,No,704,4,904.22,Dubai,2,"shops at Noon and Amazon, pays Etisalat and DEWA bills",3
+NEW00012,58.0,43172.67,Single,Clerk,No,684,4,898.16,Sharjah,2,"frequent traveler, books via Booking.com and Cleartrip",11
+NEW00013,46.0,84781.06,Married,Engineer,No,728,4,316.13,Dubai,1,"minimal shopping, pays Zomato Gold and Du bills",12
+NEW00014,18.0,62953.88,Single,Healthcare,Yes,755,4,527.03,Ajman,1,"minimal shopping, pays Zomato Gold and Du bills",14
+NEW00015,64.0,61548.21,Married,IT,No,724,1,878.88,Fujairah,0,"shops at Noon and Amazon, pays Etisalat and DEWA bills",7
+NEW00016,23.0,57789.45,Married,Sales,No,696,3,317.9,Dubai,3,shops at Lulu and pays SEWA bills regularly,3
+NEW00017,30.0,76969.25,Single,IT,No,634,1,1158.06,Dubai,1,"orders from Talabat, uses Netflix, pays Etisalat",6
+NEW00018,47.0,76287.59,Married,IT,No,757,1,220.14,Sharjah,2,shops at Lulu and pays SEWA bills regularly,1
+NEW00019,58.0,66742.29,Single,Manager,No,717,2,586.52,Dubai,0,shops at Lulu and pays SEWA bills regularly,5
+NEW00020,67.0,59955.56,Married,IT,No,661,2,1541.71,Dubai,2,"big shopper at Noon, also buys gold and tech gadgets",19
+NEW00021,37.0,50277.34,Married,Manager,No,730,5,1263.89,Ajman,2,"active on Amazon and Noon, pays credit card bills online",0
+NEW00022,65.0,45657.75,Single,Sales,No,689,0,724.45,Sharjah,3,"frequent cinema-goer, shopping at Carrefour and Centrepoint",7
+NEW00023,26.0,84156.92,Married,Healthcare,Yes,665,2,1600.1,Sharjah,2,"active on Amazon and Noon, pays credit card bills online",3
+NEW00024,69.0,79794.27,Single,Engineer,No,712,6,1582.12,Sharjah,1,"orders from Talabat, uses Netflix, pays Etisalat",1
+NEW00025,47.0,54544.45,Married,Sales,Yes,634,2,1559.94,Dubai,1,"active on Amazon and Noon, pays credit card bills online",1
+NEW00026,69.0,76225.97,Divorced,IT,No,682,2,320.78,Sharjah,1,"likes fashion brands, buys groceries from Spinneys",6
+NEW00027,52.0,86634.78,Married,Healthcare,Yes,757,5,1304.42,Dubai,2,"big shopper at Noon, also buys gold and tech gadgets",27
+NEW00028,62.0,66536.15,Married,Clerk,No,623,3,1136.54,Sharjah,0,"frequent traveler, books via Booking.com and Cleartrip",3
+NEW00029,26.0,77924.98,Married,Clerk,No,582,9,364.45,Dubai,1,"frequent traveler, books via Booking.com and Cleartrip",1
+NEW00030,37.0,76148.21,Single,Healthcare,No,683,2,1227.29,Abu Dhabi,0,"orders from Talabat, uses Netflix, pays Etisalat",8
+NEW00031,28.0,45273.45,Married,Clerk,No,691,1,823.62,Dubai,1,"frequent traveler, books via Booking.com and Cleartrip",3
+NEW00032,30.0,33518.05,Married,Clerk,Yes,706,5,709.51,Dubai,0,shops at Lulu and pays SEWA bills regularly,8
+NEW00033,49.0,48623.46,Married,IT,No,684,3,1572.8,Sharjah,3,"active on Amazon and Noon, pays credit card bills online",1
+NEW00034,61.0,53179.56,Married,Healthcare,No,778,6,854.4,Dubai,1,"orders from Talabat, uses Netflix, pays Etisalat",20
+NEW00035,41.0,79464.26,Married,Sales,No,613,1,709.17,Sharjah,2,"orders from Talabat, uses Netflix, pays Etisalat",0
+NEW00036,18.0,47619.34,Single,Engineer,No,671,4,493.14,Sharjah,1,"frequent cinema-goer, shopping at Carrefour and Centrepoint",2
+NEW00037,59.0,63778.72,Married,Healthcare,No,638,4,797.54,Fujairah,1,"orders from Talabat, uses Netflix, pays Etisalat",6
+NEW00038,27.0,67781.45,Married,Clerk,Yes,677,3,1007.31,Dubai,0,"buys electronics from Amazon, shops at Mall of the Emirates",10
+NEW00039,65.0,68819.51,Single,Engineer,No,691,2,1176.64,Fujairah,0,"likes fashion brands, buys groceries from Spinneys",0
+NEW00040,26.0,57777.1,Married,IT,No,650,5,327.49,Dubai,3,"orders from Talabat, uses Netflix, pays Etisalat",12
+NEW00041,54.0,46849.47,Divorced,IT,Yes,648,2,50.0,Dubai,1,"buys electronics from Amazon, shops at Mall of the Emirates",3
+NEW00042,37.0,71891.25,Single,Manager,No,752,5,889.88,Dubai,3,shops at Lulu and pays SEWA bills regularly,10
+NEW00043,53.0,68086.76,Married,Healthcare,No,683,3,993.08,Sharjah,1,"big shopper at Noon, also buys gold and tech gadgets",9
+NEW00044,46.0,70046.61,Married,Healthcare,No,694,2,526.16,Dubai,1,"likes fashion brands, buys groceries from Spinneys",2
+NEW00045,25.0,40942.74,Married,Clerk,No,636,3,867.91,Sharjah,2,"orders from Talabat, uses Netflix, pays Etisalat",3
+NEW00046,28.0,53307.29,Single,IT,No,662,2,936.39,Ajman,1,"frequent traveler, books via Booking.com and Cleartrip",11
+NEW00047,57.0,71692.13,Single,Engineer,Yes,659,6,1210.84,Dubai,1,"active on Amazon and Noon, pays credit card bills online",7
+NEW00048,56.0,67198.5,Single,Manager,Yes,744,4,679.53,Sharjah,0,"orders from Talabat, uses Netflix, pays Etisalat",2
+NEW00049,64.0,45589.54,Married,Manager,No,627,5,662.41,Ras Al Khaimah,0,"shops at Noon and Amazon, pays Etisalat and DEWA bills",3
+NEW00050,27.0,29964.02,Single,Sales,Yes,713,3,2053.75,Sharjah,0,"likes fashion brands, buys groceries from Spinneys",1
+NEW00051,36.0,41046.01,Divorced,Manager,Yes,756,2,646.99,Sharjah,2,"big shopper at Noon, also buys gold and tech gadgets",2
+NEW00052,25.0,49556.52,Married,Manager,No,664,3,1155.02,Abu Dhabi,1,"active on Amazon and Noon, pays credit card bills online",12
+NEW00053,57.0,42776.7,Single,IT,No,692,3,1729.39,Abu Dhabi,1,"shops at Noon and Amazon, pays Etisalat and DEWA bills",4
+NEW00054,33.0,84111.52,Married,Healthcare,No,697,5,278.37,Fujairah,1,"big shopper at Noon, also buys gold and tech gadgets",3
+NEW00055,62.0,41596.96,Divorced,Clerk,No,642,0,787.43,Dubai,2,"buys electronics from Amazon, shops at Mall of the Emirates",6
+NEW00056,18.0,81082.98,Married,Manager,No,586,2,321.9,Dubai,1,shops at Lulu and pays SEWA bills regularly,1
+NEW00057,60.0,42941.98,Married,Engineer,No,701,4,937.33,Fujairah,2,shops at Lulu and pays SEWA bills regularly,6
+NEW00058,30.0,51967.83,Married,Manager,No,729,3,1438.08,Abu Dhabi,2,"orders from Talabat, uses Netflix, pays Etisalat",2
+NEW00059,35.0,92140.76,Single,Sales,No,678,1,1040.28,Fujairah,1,shops at Lulu and pays SEWA bills regularly,5
+NEW00060,29.0,85371.79,Single,Manager,No,741,3,961.17,Ajman,0,"orders from Talabat, uses Netflix, pays Etisalat",0
+NEW00061,69.0,64128.37,Single,Sales,No,762,3,295.54,Dubai,2,"likes fashion brands, buys groceries from Spinneys",8
+NEW00062,33.0,47219.15,Single,Engineer,Yes,696,4,1532.48,Abu Dhabi,1,"frequent cinema-goer, shopping at Carrefour and Centrepoint",16
+NEW00063,51.0,64479.89,Married,IT,Yes,756,4,1230.07,Abu Dhabi,1,"big shopper at Noon, also buys gold and tech gadgets",6
+NEW00064,47.0,51519.45,Divorced,Manager,Yes,644,2,486.1,Sharjah,2,shops at Lulu and pays SEWA bills regularly,9
+NEW00065,42.0,65374.87,Married,Manager,No,634,1,722.32,Abu Dhabi,1,"buys electronics from Amazon, shops at Mall of the Emirates",0
+NEW00066,54.0,70495.15,Single,Clerk,Yes,715,4,965.84,Sharjah,3,"buys electronics from Amazon, shops at Mall of the Emirates",2
+NEW00067,37.0,66260.49,Married,Sales,Yes,683,5,289.12,Sharjah,0,"active on Amazon and Noon, pays credit card bills online",4
+NEW00068,68.0,56429.26,Single,Sales,Yes,691,2,1236.28,Sharjah,0,"frequent traveler, books via Booking.com and Cleartrip",0
+NEW00069,53.0,32249.43,Married,Sales,No,679,3,1103.19,Dubai,2,"big shopper at Noon, also buys gold and tech gadgets",0
+NEW00070,48.0,75746.6,Single,Healthcare,No,685,3,1590.26,Abu Dhabi,1,"active on Amazon and Noon, pays credit card bills online",4
+NEW00071,28.0,53431.95,Single,Manager,Yes,688,3,961.39,Sharjah,1,"shops at Noon and Amazon, pays Etisalat and DEWA bills",11
+NEW00072,69.0,69125.02,Married,Healthcare,No,688,3,1435.4,Dubai,0,"shops at Noon and Amazon, pays Etisalat and DEWA bills",17
+NEW00073,57.0,54869.68,Married,IT,No,637,2,1351.3,Umm Al Quwain,2,"buys electronics from Amazon, shops at Mall of the Emirates",1
+NEW00074,38.0,68835.29,Married,Engineer,Yes,625,5,942.71,Sharjah,0,"active on Amazon and Noon, pays credit card bills online",9
+NEW00075,45.0,72410.82,Married,Healthcare,No,697,1,1409.59,Dubai,1,"likes fashion brands, buys groceries from Spinneys",0
+NEW00076,26.0,62445.65,Married,Sales,No,724,2,574.33,Sharjah,0,"likes fashion brands, buys groceries from Spinneys",17
+NEW00077,40.0,60470.45,Married,Manager,No,738,2,1250.74,Abu Dhabi,2,shops at Lulu and pays SEWA bills regularly,4
+NEW00078,44.0,71746.58,Married,Engineer,Yes,598,4,1434.54,Dubai,0,"frequent traveler, books via Booking.com and Cleartrip",8
+NEW00079,69.0,61043.4,Single,Clerk,No,703,2,732.46,Dubai,0,"buys electronics from Amazon, shops at Mall of the Emirates",8
+NEW00080,41.0,69902.04,Single,IT,No,723,2,1066.23,Dubai,1,"minimal shopping, pays Zomato Gold and Du bills",0
+NEW00081,64.0,72170.24,Married,Healthcare,No,684,3,940.76,Umm Al Quwain,2,"orders from Talabat, uses Netflix, pays Etisalat",0
+NEW00082,65.0,40503.08,Married,Clerk,No,666,2,50.0,Dubai,3,"frequent traveler, books via Booking.com and Cleartrip",4
+NEW00083,55.0,92928.74,Single,Sales,No,678,2,262.35,Abu Dhabi,0,"active on Amazon and Noon, pays credit card bills online",7
+NEW00084,40.0,50696.35,Single,IT,No,667,3,1009.11,Dubai,1,"frequent cinema-goer, shopping at Carrefour and Centrepoint",2
+NEW00085,27.0,37023.47,Single,IT,No,725,2,1149.25,Sharjah,1,"buys electronics from Amazon, shops at Mall of the Emirates",9
+NEW00086,63.0,60929.95,Single,Manager,Yes,635,2,864.62,Dubai,4,"frequent cinema-goer, shopping at Carrefour and Centrepoint",2
+NEW00087,20.0,72346.83,Married,IT,No,641,3,50.0,Fujairah,1,"frequent cinema-goer, shopping at Carrefour and Centrepoint",9
+NEW00088,36.0,69661.82,Married,Engineer,No,661,2,1242.41,Sharjah,4,"big shopper at Noon, also buys gold and tech gadgets",5
+NEW00089,65.0,54394.49,Married,Sales,Yes,661,3,1339.31,Dubai,2,"active on Amazon and Noon, pays credit card bills online",4
+NEW00090,46.0,70696.1,Married,IT,Yes,658,4,652.42,Ajman,1,"minimal shopping, pays Zomato Gold and Du bills",2
+NEW00091,29.0,48659.04,Married,Sales,No,630,5,934.23,Dubai,2,"shops at Noon and Amazon, pays Etisalat and DEWA bills",2
+NEW00092,28.0,62986.14,Single,Healthcare,No,645,2,1047.83,Dubai,1,"active on Amazon and Noon, pays credit card bills online",7
+NEW00093,67.0,74687.72,Married,IT,Yes,664,2,1081.83,Abu Dhabi,0,"frequent cinema-goer, shopping at Carrefour and Centrepoint",1
+NEW00094,48.0,51582.02,Single,Manager,Yes,713,5,1091.74,Ajman,1,"orders from Talabat, uses Netflix, pays Etisalat",16
+NEW00095,53.0,68157.49,Single,Manager,No,704,3,50.0,Dubai,3,"frequent cinema-goer, shopping at Carrefour and Centrepoint",2
+NEW00096,46.0,63724.36,Married,Manager,Yes,673,8,1173.92,Dubai,1,"minimal shopping, pays Zomato Gold and Du bills",7
+NEW00097,21.0,42719.45,Single,Healthcare,Yes,648,4,500.26,Abu Dhabi,1,"frequent cinema-goer, shopping at Carrefour and Centrepoint",6
+NEW00098,37.0,55246.69,Married,Sales,No,613,6,543.94,Dubai,0,"minimal shopping, pays Zomato Gold and Du bills",7
+NEW00099,38.0,51734.3,Single,Manager,No,642,3,1125.61,Ajman,2,"big shopper at Noon, also buys gold and tech gadgets",12
+NEW00100,65.0,50546.94,Single,Engineer,No,713,3,850.45,Dubai,1,"shops at Noon and Amazon, pays Etisalat and DEWA bills",13

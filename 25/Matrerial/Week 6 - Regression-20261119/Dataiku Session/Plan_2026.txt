@@ -1,0 +1,26 @@
+Session 5 --
+
+All Dataiku data prep
+Data quality
+Regression model on IRIS data set
+
+Develop regression model on Air Passenger Data
+ 
+Develop regression model on Boston-Housing-Dataset
+
+https://www.kaggle.com/datasets/simpleparadox/bostonhousingdataset
+
+Develop regression model on Car Sale Price dataset
+
+https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho
+
+
+What is the best model ?
+Which are important features ?
+
+
+Build regression model on Uber Data
+
+What is the best model ?
+Which are important features ?
+
