@@ -1,0 +1,81 @@
+    1  git config --global user.name 0ni1ecram
+    2  git config --global email ndewaiyo@gmail.com
+    3  git config --global user.email ndewaiyo@gmail.com
+    4  git --version
+    5  git pull
+    6  git pull https://github.com/0ni1ecram/cst4200.it
+    7  git pull https://github.com/0ni1ecram/cst4200.git
+    8  git clone https://github.com/0ni1ecram/cst4200.git
+   10  touch git setup.txt
+   21  git status
+   22  git add .
+   23  git status
+   30  git add .
+   31  git status
+   32  git commit -m "CST4225_CW roadmap added"
+   33  git push
+   34  git status
+   35  git add .
+   36  git status
+   37  git commit -m "Dataset for AirBNB added"
+   38  git push
+   39  git pull
+   40  git push
+   41  git pull
+   43  git pull
+   44  git add .
+   45  git commit -m "material data added"
+   46  git push
+   47  git pull
+   48  git push
+   49  git status
+   50  git add .
+   51  git commit -m "deleted files"
+   52  git status
+   53  git pull
+   54  git push
+   55  git status
+   56  git add .
+   57  git add .
+   58  git commit -m "Competition Data Shared, wireframes n all"
+   59  git push
+   60  git pull
+   61  git push
+   62  git delete  25/airbnb data/listings.csv.gz
+   63  git rm "s5/airbnb data/listings.csv.gz"
+   64  git rm "25/airbnb data/listings.csv.gz"
+   65  git rm "25/Dataset/listings.csv"
+   66  git status
+   67  git reset --soft HEAD~1
+   68  git reset HEAD "25/Dataset/listings.csv" "25/airbnb data/listings.csv.gz"
+   71  git add .gitignore
+   72  git commit -m "Remove large dataset files and update gitignore"
+   73  git push origin master
+   74  git pull
+   75  git push
+   76  git lfs install
+   77  [200~git lfs migrate import --include="25/Dataset/listings.csv,25/airbnb data/listings.csv.gz" --include-ref=refs/heads/master
+   78  git lfs migrate import --include="25/Dataset/listings.csv,25/airbnb data/listings.csv.gz" --include-ref=refs/heads/master
+   79  git push
+   80  git pull
+   81  git pull origin master --allow-unrelated-histories
+   82  git push
+   83  git add .
+   84  git commit -m "Merge remote GitHub repository with local work"
+   85  git push -u origin master
+   86  [200~FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --index-filter   "git rm --cached --ignore-unmatch '25/Dataset/listings.csv' '25/airbnb data/listings.csv/listings.csv' '25/airbnb data/listings.csv.gz'"   --prune-empty --tag-name-filter cat -- --all
+   87  FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --index-filter   "git rm --cached --ignore-unmatch '25/Dataset/listings.csv' '25/airbnb data/listings.csv/listings.csv' '25/airbnb data/listings.csv.gz'"   --prune-empty --tag-name-filter cat -- --all
+   88  [200~git push -u origin master
+   89  git push
+   90  git pull
+   91  git push
+   92  git pull
+   93  git status
+   94  git add .
+   95  git pull
+   96  git commit -m "Rand add"
+   97  git pull
+   98  git push
+   99  [200~history | grep "git " > git_commands_today.txt
+  100  ~history | grep "git " > git_commands_today.txt
+  101  history | grep "git " > git_commands_today.txt
